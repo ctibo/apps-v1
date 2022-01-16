@@ -3,33 +3,24 @@
 
 html, body {
   min-height: 100%;
+  height: 100%;
 }
 body {
-  padding: 0 0 4rem;
+  padding: 0;
   margin: 0;
-  min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  background: $bg-color;
+  background: $bg-color url('/images/bg-noise.jpg') repeat center center;
+}
+#sapper {
+  height: 100%;
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: var(--container-width);
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-}
-
-.full-width-container {
-  margin: 0 auto;
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
-}
-
-.content {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  max-width: var(--container-width)
+ 
 }
 
 .columns {

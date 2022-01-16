@@ -7,14 +7,13 @@ $dark-red: #c92347;
 $purple: #743ad5;
 $teal: #09ffc8;
 $blue: #09dcff;
-$light-blue: #728ca7;
-$medium-blue: #1b3a52;
-$dark-blue: #15202b;
 
-$text-color: $white;
-$title-color: $white;
+$dark-gray: #131313;
 
-$bg-color: $dark-blue;
+$text-color: $dark-gray;
+$title-color: $dark-gray;
+
+$bg-color: $dark-gray;
 $border-color: #2f455d;
 $input-bg: #1d2c3c;
 
@@ -28,9 +27,8 @@ $input-bg: #1d2c3c;
     --teal: #{$teal};
     --blue: #{$blue};
 
-    --light-blue: #{$light-blue};
-    --medium-blue: #{$medium-blue};
-    --dark-blue: #{$dark-blue};
+
+    --dark-gray: #{$dark-gray};
 
     --text-color: #{$text-color};
     --title-color: #{$title-color};

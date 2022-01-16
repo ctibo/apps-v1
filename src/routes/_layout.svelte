@@ -1,6 +1,6 @@
 <script>
 	import Scripts from '../components/elements/Scripts.svelte';
-	import Popup from '../components/popups/Popup.svelte';
+	import PhoneFrame from '../components/layout/PhoneFrame.svelte';
 </script>
 
 <style lang="scss" global>
@@ -11,9 +11,12 @@
 	<title>APPs - Awesome Profile Pics</title>
 </svelte:head>
 
-<main >
-	<slot></slot>
-</main>
+
+<PhoneFrame>
+	<main>
+		<slot></slot>
+	</main>
+</PhoneFrame>
 
 <!-- <Popup /> -->
 <Scripts />
