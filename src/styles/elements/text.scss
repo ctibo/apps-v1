@@ -1,0 +1,116 @@
+@import '../variables';
+@import '../mixins';
+
+
+body {
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+//
+// Titles
+// ----------------------------------------------
+%title {
+  color: var(--title-color);
+  font-family: var(--title-font);
+}
+
+.banner-title {
+  @extend %title;
+  font-size: clamp(2rem, 10vw, 4rem);
+  line-height: 1.1;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.banner-subtitle {
+  color: var(--title-color);
+  font-family: var(--text-font);
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  text-align: center;
+}
+
+.page-title {
+  @extend %title;  
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+  .subtitle {
+    font-size: 0.325em;
+    font-style: italic;
+    font-family: var(--text-font);
+    display: block;
+  }
+}
+
+.section-title {
+  @extend %title;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 1.5em 0 0.75em;
+}
+
+.menu-title {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  border-bottom: 1px solid currentColor;
+}
+
+
+//
+// Text
+// ----------------------------------------------
+p {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  line-height: 1.5;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ol.list,
+ul.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: block;
+    margin: 0.5em 0;
+    padding: 0 0 0 2em;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.5em;
+      left: 0.25em;
+      background: var(--red);
+      border-radius: 0.5em;
+      width: 0.5em;
+      height: 0.5em;
+    }
+  }
+}
+
+.text-link {
+  color: var(--white);
+  display: inline-block;
+  &:hover {
+    color: var(--red);
+    text-decoration: underline;
+  }
+}
+button.text-link {
+  background: none;
+  padding: 0;
+  border: none;
+  outline: none;
+}
