@@ -3,10 +3,12 @@
 </script>
 
 <style lang="scss">
+  @import '../../styles/variables';
+  @import '../../styles/mixins';
+
   .wrapper {
     position: relative;
     margin: 0 auto;
-    padding: var(--container-padding);
     display: block;
     width: 100%;
     max-width: 36rem;
@@ -15,7 +17,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch; 
   }
   img {
     display: block;
@@ -26,16 +28,42 @@
     flex-grow: 3;
     padding: 0 1%;
     overflow: hidden;
-    background: rgb(224, 224, 224) url('/images/frame-sides.svg') repeat-y center top;
+    background-color: var(--content-bg-color);
+    background-image: url('/images/frame-sides.svg');
+    background-repeat: repeat-y; 
+    background-position: center top;
     background-size: 100% auto;
     margin: -1px 0;
   }
   .content {
+    width: 100%;
     height: 100%;
     padding: var(--container-padding);
     overflow: auto;
   }
-  
+  .hand {
+    .left, .right {
+      pointer-events: none;
+      position: absolute;
+      bottom: 0;
+      line-height: 0;
+      display: block;
+      width: clamp(50%, 80vh, 125%);
+      background-size: 100% auto;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+    }
+    .left {
+      z-index: 1;
+      left: 0;
+      transform: translate(-13.7%, 6%);
+    }
+    .right {
+      z-index: -1;
+      right: 0;
+      transform: translate(28.5%, 11.5%);
+    }
+  }
 </style>
 
 
@@ -47,4 +75,8 @@
     </div>
   </div>
   <img src="/images/frame-bottom.svg" alt=""/>
+  <div class="hand">
+    <img class="left" src="/images/hand-left.png" alt="">
+    <img class="right" src="/images/hand-right.png" alt="">
+  </div>
 </div>

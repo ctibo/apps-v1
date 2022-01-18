@@ -11,8 +11,15 @@ $breakpoint-xl: 1280px;
 
 @mixin sizes-cssvars {
   :root {
-    --nav-width: 16rem;
-    --container-width: 100%;
-    --container-padding: 1.5rem;
+    --breakpoint-sm: #{$breakpoint-sm};
+    --breakpoint-md: #{$breakpoint-md};
+    --breakpoint-lg: #{$breakpoint-lg};
+    --breakpoint-xl: #{$breakpoint-xl};
+    --container-padding: 3vw;
+  }
+  @include min-width($breakpoint-sm) {
+    :root {
+      --container-padding: 1.5rem;
+    }
   }
 }

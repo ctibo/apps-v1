@@ -9,8 +9,12 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  overflow-x: hidden;
-  background: $bg-color url('/images/bg-noise.jpg') repeat center center;
+  overflow: hidden;
+  padding: 1.5rem 8%;
+  background-color: #a9bcea;
+  background-image: linear-gradient(0deg, #6a97b9 0%, #a9bcea 100%), url('/images/noise.png');
+  background-blend-mode: overlay;
+  background-position: center center;
 }
 #sapper {
   height: 100%;

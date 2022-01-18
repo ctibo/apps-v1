@@ -15,32 +15,12 @@ body {
   font-family: var(--title-font);
 }
 
-.banner-title {
-  @extend %title;
-  font-size: clamp(2rem, 10vw, 4rem);
-  line-height: 1.1;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-}
-.banner-subtitle {
-  color: var(--title-color);
-  font-family: var(--text-font);
-  font-size: clamp(1.25rem, 4vw, 1.5rem);
-  text-align: center;
-}
-
 .page-title {
   @extend %title;  
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 7vw, 2.3rem);
+  line-height: 0.75em;
   text-align: center;
   margin: 0;
-  .subtitle {
-    font-size: 0.325em;
-    font-style: italic;
-    font-family: var(--text-font);
-    display: block;
-  }
 }
 
 .section-title {

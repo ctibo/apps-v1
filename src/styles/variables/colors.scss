@@ -5,15 +5,17 @@ $white: #fff;
 $red: #ff3864;
 $dark-red: #c92347;
 $purple: #743ad5;
-$teal: #09ffc8;
-$blue: #09dcff;
+$teal: #4afff7;
+$blue: #83dbff;
 
+$light-gray: #ececec;
 $dark-gray: #131313;
 
-$text-color: $dark-gray;
-$title-color: $dark-gray;
+$text-color: $teal;
+$title-color: $blue;
 
 $bg-color: $dark-gray;
+$content-bg-color: #081a27;
 $border-color: #2f455d;
 $input-bg: #1d2c3c;
 
@@ -34,6 +36,7 @@ $input-bg: #1d2c3c;
     --title-color: #{$title-color};
 
     --bg-color: #{$bg-color};
+    --content-bg-color: #{$content-bg-color};
     --border-color: #{$border-color};
     --input-bg: #{$input-bg};
 
