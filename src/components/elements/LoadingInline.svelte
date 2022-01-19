@@ -18,7 +18,7 @@
     top: 0;
     left: 20%;
     border-radius: 0.25em;
-    background: var(--white);
+    background: var(--lavender);
     animation: bounce 800ms infinite alternate var(--ease);
   }
 

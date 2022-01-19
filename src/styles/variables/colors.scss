@@ -6,7 +6,11 @@ $red: #ff3864;
 $dark-red: #c92347;
 $purple: #743ad5;
 $teal: #4afff7;
+$lavender: #a9bcea;
+
+$light-blue: #6a97b9;
 $blue: #83dbff;
+$dark-blue: #0f293b;
 
 $light-gray: #ececec;
 $dark-gray: #131313;
@@ -14,7 +18,7 @@ $dark-gray: #131313;
 $text-color: $teal;
 $title-color: $blue;
 
-$bg-color: $dark-gray;
+$bg-color: $lavender;
 $content-bg-color: #081a27;
 $border-color: #2f455d;
 $input-bg: #1d2c3c;
@@ -27,7 +31,11 @@ $input-bg: #1d2c3c;
     --dark-red: #{$dark-red};
     --purple: #{$purple};
     --teal: #{$teal};
+    --lavender: #{$lavender};
+
     --blue: #{$blue};
+    --light-blue: #{$light-blue};
+    --dark-blue: #{$dark-blue};
 
 
     --dark-gray: #{$dark-gray};
@@ -40,6 +48,7 @@ $input-bg: #1d2c3c;
     --border-color: #{$border-color};
     --input-bg: #{$input-bg};
 
-    --gradient: linear-gradient(-45deg, #{$purple}, #{$red});
+    --gradient: linear-gradient(-45deg, #{$light-blue}, #{$lavender});
+    --gradient-purple: linear-gradient(-45deg, #{$lavender}, #{$blue});
   }
 }

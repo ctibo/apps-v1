@@ -1,0 +1,38 @@
+<script>
+  import AssetImg from './AssetImg.svelte';
+  export let nft = {};
+</script>
+
+<style lang="scss">
+  .thumbnail {
+    overflow: hidden;
+    border-radius: 15%;
+    box-shadow: 0 0.5rem 1rem -0.25rem rgba(0,0,0,0.5);
+    :global(.img-wrapper) {
+      display: block;
+      width: 136%;
+      margin: -18%;
+    }
+    :global(.loader) {
+      padding: 10% 30%;
+    }
+  }
+  .thumbnail-title {
+    font-family: var(--title-font);
+    color: var(--lavender);
+    text-align: center;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    line-height: 0.75;
+    font-weight: 300;
+    margin: 0.25em 0 0;
+  }
+</style>
+
+<article class="wrapper">
+  <div class="thumbnail">
+    <AssetImg src={nft.url} alt={nft['unit-name']} />
+  </div>
+  <h2 class="thumbnail-title">
+    {nft['unit-name']}
+  </h2>
+</article>

@@ -11,7 +11,7 @@
     margin: 0 auto;
     display: block;
     width: 100%;
-    max-width: 36rem;
+    max-width: 32rem;
     height: 100%;
     max-height: 100%;
     display: flex;

@@ -4,7 +4,7 @@
 
 * {
   scrollbar-width: thin; 
-  scrollbar-color: var(--red) var(--dark-blue);
+  scrollbar-color: var(--lavender) var(--dark-blue);
 }
 
 *::-webkit-scrollbar {
@@ -17,9 +17,9 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--gradient);
+  background: var(--gradient-purple);
   border-radius: 1rem;
-  border: 4px solid rgba($red, 0);
+  border: 4px solid rgba($lavender, 0);
   box-sizing: border-box;
   background-clip: content-box;
 }
