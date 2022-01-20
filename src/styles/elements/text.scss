@@ -19,8 +19,15 @@ body {
   @extend %title;  
   font-size: clamp(1.6rem, 7vw, 2.3rem);
   line-height: 0.75em;
+  font-weight: bold;
   text-align: center;
-  margin: 0;
+  margin: 1em 0;
+  .subtitle {
+    font-size: 0.625em;
+    font-weight: normal;
+    margin-top: 0.75em;
+    display: block;
+  }
 }
 
 .section-title {

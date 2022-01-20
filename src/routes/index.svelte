@@ -15,15 +15,12 @@
 
 <style lang="scss">
   .logo {
-    text-align: center;
-    margin: 1em 0;
     img {
       width: 66%;
     }
-    span {
-      margin-top: 0.5em;
-      display: block;
-    }
+  }
+  .subtitle {
+    font-weight: bold;
   }
  
 </style>
@@ -32,7 +29,7 @@
   
   <h1 class="logo page-title">
     <img src="/images/apps-logo.png" alt="Awesome Profile Pics" />
-    <span>Awesome Profile Pics</span>
+    <span class="subtitle">Awesome Profile Pics</span>
   </h1>
 
   {#if loading}

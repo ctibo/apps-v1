@@ -21,10 +21,10 @@
     font-family: var(--title-font);
     color: var(--lavender);
     text-align: center;
-    font-size: clamp(1rem, 5vw, 1.5rem);
-    line-height: 0.75;
+    font-size: clamp(0.5rem, 3vw, 0.925rem);
+    line-height: 1;
     font-weight: 300;
-    margin: 0.25em 0 0;
+    margin: 0.5em 0 0;
   }
   a {
     &:hover {
