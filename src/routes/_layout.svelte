@@ -1,6 +1,6 @@
 <script>
 	import Scripts from '../components/elements/Scripts.svelte';
-	import PhoneFrame from '../components/layout/PhoneFrame.svelte';
+	import Frame from '../components/layout/Frame.svelte';
 </script>
 
 <style lang="scss" global>
@@ -12,11 +12,9 @@
 </svelte:head>
 
 
-<PhoneFrame>
-	<main>
-		<slot></slot>
-	</main>
-</PhoneFrame>
+<Frame>
+	<slot></slot>
+</Frame>
 
 <!-- <Popup /> -->
 <Scripts />

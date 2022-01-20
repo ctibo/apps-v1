@@ -1,5 +1,5 @@
 <script>
-  
+  import Nav from './Nav.svelte';
 </script>
 
 <style lang="scss">
@@ -28,7 +28,6 @@
     flex-grow: 3;
     padding: 0 1%;
     overflow: hidden;
-    background-color: var(--content-bg-color);
     background-image: url('/images/frame-sides.svg');
     background-repeat: repeat-y; 
     background-position: center top;
@@ -37,7 +36,8 @@
   }
   .content {
     width: 100%;
-    height: 100%;
+    background-color: var(--content-bg-color);
+    height: calc(100% - var(--navbar-height));
     padding: var(--container-padding);
     overflow: auto;
   }
@@ -69,11 +69,14 @@
 
 <div class="wrapper">
   <img src="/images/frame-top.svg" alt=""/>
+
   <div class="inner-wrapper">
-    <div class="content">
+    <main class="content">
       <slot></slot>
-    </div>
+    </main>
+    <Nav />
   </div>
+
   <img src="/images/frame-bottom.svg" alt=""/>
   <div class="hand">
     <img class="left" src="/images/hand-left.png" alt="">

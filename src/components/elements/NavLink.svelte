@@ -1,6 +1,6 @@
 <script>
   import { stores } from '@sapper/app';
-  export let label = Link;
+  export let label;
   export let href;
   const { page } = stores();
   let active = false;
@@ -10,7 +10,7 @@
 
 <style lang="scss">
   a {
-    color: var(--white);
+    color: var(--blue);
     text-decoration: none;
     text-transform: uppercase;
     display: block;
@@ -19,7 +19,7 @@
       text-decoration: none;
     }
     &.active {
-      color: var(--teal);
+      color: var(--white);
     }
   }
 </style>
@@ -28,5 +28,8 @@
   class:active 
   {href}
 >
-  { label }
+  {#if label}
+    { label }
+  {/if}
+  <slot></slot>
 </a>

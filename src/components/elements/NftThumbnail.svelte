@@ -26,13 +26,20 @@
     font-weight: 300;
     margin: 0.25em 0 0;
   }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 </style>
 
 <article class="wrapper">
-  <div class="thumbnail">
-    <AssetImg src={nft.url} alt={nft['unit-name']} />
-  </div>
-  <h2 class="thumbnail-title">
-    {nft['unit-name']}
-  </h2>
+  <a href={`https://www.nftexplorer.app/asset/${nft.index}`} target="_blank">
+    <div class="thumbnail">
+      <AssetImg src={nft.url} alt={nft['unit-name']} />
+    </div>
+    <h2 class="thumbnail-title">
+      {nft['unit-name']}.exe
+    </h2>
+  </a>
 </article>
