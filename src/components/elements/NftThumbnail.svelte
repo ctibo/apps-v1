@@ -39,7 +39,7 @@
       <AssetImg src={nft.url} alt={nft['unit-name']} />
     </div>
     <h2 class="thumbnail-title">
-      {nft['unit-name']}.exe
+      {nft['unit-name']}
     </h2>
   </a>
 </article>
