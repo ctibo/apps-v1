@@ -10,7 +10,7 @@
     position: relative;
     margin: 0 auto;
     display: block;
-    width: 100%;
+    width: 90%;
     max-width: 32rem;
     height: 100%;
     max-height: 100%;
