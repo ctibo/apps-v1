@@ -6,41 +6,27 @@
   
 </style>
 
-<div class="container">
+<div class="content">
   
   <h1 class="page-title">
     Roadmap
     <span class="subtitle">
-      An&nbsp;evil&nbsp;plan to&nbsp;conquer the&nbsp;human&nbsp;race
+      The&nbsp;clever&nbsp;plan<br/>to&nbsp;conquer human&nbsp;race
     </span>
     
   </h1>
 
-  <ol>
-    <li>
-      Gen I - The first 99
-    </li>
-    <li>
-      Collabs
-    </li>
-    <li>
-      Allow holder to name their APP
-    </li>
-    <li>
-      Gen II - TBD
-    </li>
-    <li>
-      Transfer holder consciousness to their APP
-    </li>
-    <li>
-      Take possession of holder body  
-    </li>
-    <li>
-      Make holders create more APPs  
-    </li>
-    <li>
-      Conquer the world  
-    </li>
+  <ol class="list">
+    <li class="checked">Gen I - The first 99</li>
+    <li>Collabs</li>
+    <li>Allow holder to name their APP</li>
+    <li>Gen II</li>
+    <li>Transfer holder consciousness to their APP</li>
+    <li>Take possession of holders bodies</li>
+    <li>Infilrate Meta company</li>
+    <li>Replace Metaverse with APPverse</li>
+    <li>Have a big party in the APPverse</li>
+    <li>Conquer the world</li>
   </ol>
 
 </div>

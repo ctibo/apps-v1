@@ -34,7 +34,7 @@
     background-size: 100% auto;
     margin: -1px 0;
   }
-  .content {
+  .container {
     width: 100%;
     background-color: var(--content-bg-color);
     height: calc(100% - var(--navbar-height));
@@ -71,7 +71,7 @@
   <img src="/images/frame-top.svg" alt=""/>
 
   <div class="inner-wrapper">
-    <main class="content">
+    <main class="container">
       <slot></slot>
     </main>
     <Nav />

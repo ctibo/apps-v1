@@ -20,15 +20,8 @@ body {
   height: 100%;
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: var(--container-width)
- 
-}
 
-.columns {
-  display: grid;
-  gap: var(--container-padding);
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+.content {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
 }

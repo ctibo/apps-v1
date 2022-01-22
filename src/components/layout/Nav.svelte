@@ -28,7 +28,7 @@
       <NavLink href="/about">About</NavLink>
     </li>
     <li>
-      <NavLink href="/">APPs</NavLink>
+      <NavLink href="/">The APPs</NavLink>
     </li>
     <li>
       <NavLink href="/roadmap">Roadmap</NavLink>
