@@ -29,7 +29,7 @@
     flex-grow: 3;
     padding: 0 1%;
     overflow: hidden;
-    background-image: url('/images/frame-sides.svg');
+    background-image: url('/images/frame-sides.png');
     background-repeat: repeat-y; 
     background-position: center top;
     background-size: 100% auto;
@@ -69,7 +69,7 @@
 
 
 <div class="wrapper">
-  <img src="/images/frame-top.svg" alt=""/>
+  <img src="/images/frame-top.png" alt=""/>
 
   <div class="inner-wrapper">
     <main class="container">
@@ -78,7 +78,7 @@
     <Nav />
   </div>
 
-  <img src="/images/frame-bottom.svg" alt=""/>
+  <img src="/images/frame-bottom.png" alt=""/>
   <div class="hand">
     <img class="left" src="/images/hand-left.png" alt="">
     <img class="right" src="/images/hand-right.png" alt="">
