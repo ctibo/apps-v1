@@ -8,6 +8,7 @@
 
   .wrapper {
     position: relative;
+    z-index: 1;
     margin: 0 auto;
     display: block;
     width: 90%;

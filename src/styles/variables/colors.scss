@@ -18,7 +18,7 @@ $dark-gray: #131313;
 $text-color: $white;
 $title-color: $blue;
 
-$bg-color: $lavender;
+$bg-color: #24203c;
 $content-bg-color: #081a27;
 $border-color: #2f455d;
 $input-bg: #1d2c3c;
@@ -49,5 +49,7 @@ $input-bg: #1d2c3c;
 
     --gradient: linear-gradient(-45deg, #{$light-blue}, #{$lavender});
     --gradient-purple: linear-gradient(-45deg, #{$lavender}, #{$blue});
+    --bg-gradient: radial-gradient(circle farthest-side, #187e79, #24203c);
+
   }
 }
