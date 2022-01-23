@@ -1,9 +1,14 @@
 <script>
+  import { fade } from 'svelte/transition';
   import AssetImg from './AssetImg.svelte';
   export let nft = {};
+  let loading = true;
 </script>
 
 <style lang="scss">
+  .wrapper {
+    position: relative;
+  }
   .thumbnail {
     overflow: hidden;
     border-radius: 15%;
@@ -26,6 +31,21 @@
     font-weight: 300;
     margin: 0.5em 0 0;
   }
+  .tag {
+    display: inline-block;
+    font-size: 0.625em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.125em 0.5em;
+    color: var(--dark-purple);
+    background: var(--teal);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transform: translate(-10%, 50%) rotate(-12deg);
+    pointer-events: none;
+  }
   a {
     &:hover {
       text-decoration: none;
@@ -34,9 +54,14 @@
 </style>
 
 <article class="wrapper">
+  {#if nft.tag && !loading}
+    <span class="tag" transition:fade={{ duration: 300}}>
+      {nft.tag}
+    </span>
+  {/if}
   <a href={`https://www.nftexplorer.app/asset/${nft.index}`} target="_blank">
     <div class="thumbnail">
-      <AssetImg src={nft.url} alt={nft['unit-name']} />
+      <AssetImg src={nft.url} alt={nft['unit-name']} bind:loading />
     </div>
     <h2 class="thumbnail-title">
       {nft['unit-name']}

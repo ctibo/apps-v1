@@ -1,11 +1,11 @@
 <script>
   import { onMount } from 'svelte';
+  import { fade } from 'svelte/transition';
   import LoadingInline from './LoadingInline.svelte';
   import { gateways } from '../../helpers/ipfs';
-  import { fade } from 'svelte/transition';
   export let src;
   export let alt;
-  let loading = true;
+  export let loading = true;
   let gatewayIndex = 0;
   let hash;
 

@@ -3,7 +3,9 @@
 </script>
 
 <style lang="scss">
-  
+  .joke {
+    color: var(--light-blue);
+  }
 </style>
 
 <div class="content">
@@ -19,14 +21,14 @@
   <ol class="list">
     <li class="checked">Gen I - The first 99</li>
     <li>Collabs</li>
-    <li>Allow holder to name their APP</li>
+    <li>Allow holders can rename their APP</li>
     <li>Gen II</li>
-    <li>Transfer holder consciousness to their APP</li>
-    <li>Take possession of holders bodies</li>
-    <li>Infilrate Meta company</li>
-    <li>Replace Metaverse with APPverse</li>
-    <li>Have a big party in the APPverse</li>
-    <li>Conquer the world</li>
+    <li class="joke">Transfer holders consciousness to their APP</li>
+    <li class="joke">Take possession of holders bodies</li>
+    <li class="joke">Infilrate Meta company</li>
+    <li class="joke">Replace Metaverse with APPverse</li>
+    <li class="joke">Have a big party in the APPverse</li>
+    <li class="joke">Conquer the world</li>
   </ol>
 
 </div>
