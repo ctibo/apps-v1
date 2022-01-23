@@ -6,6 +6,7 @@ $red: #ff3864;
 $dark-red: #c92347;
 
 $lavender: #a9bcea;
+$light-purple: #c9a9ff;
 $purple: #743ad5;
 $dark-purple: #24203c;
 
@@ -14,7 +15,7 @@ $dark-teal: #187e79;
 
 $light-blue: #6a97b9;
 $blue: #83dbff;
-$dark-blue: #0f293b;
+$dark-blue: #0f2b4c;
 
 
 $light-gray: #ececec;
@@ -24,7 +25,7 @@ $text-color: $white;
 $title-color: $blue;
 
 $bg-color: #24203c;
-$content-bg-color: #081a27;
+$content-bg-color: #141332;
 $border-color: #2f455d;
 $input-bg: #1d2c3c;
 
@@ -58,7 +59,16 @@ $input-bg: #1d2c3c;
 
     --gradient: linear-gradient(-45deg, #{$light-blue}, #{$lavender});
     --gradient-purple: linear-gradient(-45deg, #{$lavender}, #{$blue});
-    --bg-gradient: radial-gradient(circle farthest-side, #{$dark-teal}, #{$dark-purple});
+    --bg-gradient: radial-gradient(
+        circle farthest-side, 
+        #{$dark-teal}, 
+        #{$dark-purple}
+      );
+    --content-bg-highlight: radial-gradient(
+        circle closest-corner at center -50px, 
+        #{rgba($light-purple, 0.25)}, 
+        #{rgba($light-purple, 0)}
+      );
 
   }
 }

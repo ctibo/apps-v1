@@ -26,6 +26,7 @@
 
 <a 
   class:active 
+  rel="prefetch"
   {href}
   {...$$restProps}
 >

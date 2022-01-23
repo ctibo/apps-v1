@@ -22,11 +22,14 @@
   .subtitle {
     font-weight: bold;
   }
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
  
 </style>
 
-<div class="container">
-  
+<div class="content">
   <h1 class="logo page-title">
     <img src="/images/apps-logo.png" alt="Awesome Profile Pics" />
     <span class="subtitle">Awesome Profile Pics</span>

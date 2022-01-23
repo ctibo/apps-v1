@@ -39,7 +39,7 @@
     width: 100%;
     background-color: var(--content-bg-color);
     height: calc(100% - var(--navbar-height));
-    padding: var(--container-padding);
+    padding: 0 var(--container-padding);
     overflow: auto;
   }
   .hand {

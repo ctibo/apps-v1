@@ -24,6 +24,6 @@ body {
 
 
 .content {
-  padding-left: var(--container-padding);
-  padding-right: var(--container-padding);
+  padding: var(--container-padding);
+  background-image: var(--content-bg-highlight);
 }

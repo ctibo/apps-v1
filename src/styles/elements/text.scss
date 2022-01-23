@@ -16,6 +16,8 @@ body {
 }
 
 .page-title {
+  position: relative;
+  z-index: 1;
   @extend %title;  
   color: var(--white);
   font-size: clamp(1.6rem, 7vw, 2.3rem);
