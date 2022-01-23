@@ -13,7 +13,7 @@
   <h1 class="page-title">
     Roadmap
     <span class="subtitle">
-      The&nbsp;clever&nbsp;plan<br/>to&nbsp;conquer human&nbsp;race
+      A clever plan <br/>to conquer human race
     </span>
     
   </h1>
