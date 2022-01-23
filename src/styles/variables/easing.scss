@@ -1,9 +1,11 @@
 
 $ease: cubic-bezier(.88,0,.33,1);
+$swing: cubic-bezier(.55,1.75,.75,1);
 
 
 @mixin easing-cssvars {
   :root{
     --ease: #{$ease};
+    --swing: #{$swing};
   }
 }

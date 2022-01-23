@@ -7,8 +7,8 @@
   .infos {
     padding: 1.5em 0;
     margin-bottom: 1.5em;
-    border-top: 1px solid var(--lavender);
-    border-bottom: 1px solid var(--lavender);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
   }
 </style>
 

@@ -8,16 +8,30 @@
   @import '../../styles/variables';
   nav {
     width: 100%;
-    padding: 1em;
+    padding: 0 1em;
     height: var(--navbar-height);
     background: var(--dark-blue);
     display: block;
+    :global(a) {
+      font-size: 1.75em;
+      transform: scale(0.75);
+      transition: transform 240ms var(--swing);
+      }
+      :global(a.active) {
+        transform: scale(1);
+      }
   }
   ul {
+    height: 100%;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-around;
+  }
+  li {
+    display: block;
+    flex-grow: 1;
+    text-align: center;
   }
 </style>
 
@@ -25,13 +39,19 @@
 <nav role="navigation" bind:clientHeight={$navBarHeight}>
   <ul>
     <li>
-      <NavLink href="/about">About</NavLink>
+      <NavLink href="/about" title="About">
+        <i class="fas fa-info-circle"></i>
+      </NavLink>
     </li>
     <li>
-      <NavLink href="/">The APPs</NavLink>
+      <NavLink href="/" title="The Apps">
+        <i class="fas fa-th"></i>
+      </NavLink>
     </li>
     <li>
-      <NavLink href="/roadmap">Roadmap</NavLink>
+      <NavLink href="/roadmap" title="Roadmap">
+        <i class="fas fa-map"></i>
+      </NavLink>
     </li>
   </ul>
 </nav>

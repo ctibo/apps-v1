@@ -27,6 +27,7 @@
 <a 
   class:active 
   {href}
+  {...$$restProps}
 >
   {#if label}
     { label }

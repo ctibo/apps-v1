@@ -4,13 +4,18 @@
 $white: #fff;
 $red: #ff3864;
 $dark-red: #c92347;
-$purple: #743ad5;
-$teal: #4afff7;
+
 $lavender: #a9bcea;
+$purple: #743ad5;
+$dark-purple: #24203c;
+
+$teal: #4afff7;
+$dark-teal: #187e79;
 
 $light-blue: #6a97b9;
 $blue: #83dbff;
 $dark-blue: #0f293b;
+
 
 $light-gray: #ececec;
 $dark-gray: #131313;
@@ -49,7 +54,7 @@ $input-bg: #1d2c3c;
 
     --gradient: linear-gradient(-45deg, #{$light-blue}, #{$lavender});
     --gradient-purple: linear-gradient(-45deg, #{$lavender}, #{$blue});
-    --bg-gradient: radial-gradient(circle farthest-side, #187e79, #24203c);
+    --bg-gradient: radial-gradient(circle farthest-side, #{$dark-teal}, #{$dark-purple});
 
   }
 }
