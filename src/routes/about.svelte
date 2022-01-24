@@ -10,6 +10,14 @@
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
   }
+  .algos {
+    display: inline-block;
+    width: auto;
+    font-size: 0.625em;
+    height: 1em;
+    margin-left: 0.125em;
+    vertical-align: baseline;
+  }
 </style>
 
 <div class="content">
@@ -55,16 +63,16 @@
   </p>
   <ul class="list">
     <li>
-      #01-24 ➞ 33A each
+      #01-24 ➞ 33<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
     </li>
     <li>
-      #25-48 ➞ 44A each
+      #25-48 ➞ 44<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
     </li>
     <li>
-      #49-72 ➞ 55A each
+      #49-72 ➞ 55<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
     </li>
     <li>
-      #73-99 ➞ 66A each
+      #73-99 ➞ 66<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
     </li>
   </ul> 
 
