@@ -21,7 +21,7 @@
   <ol class="list">
     <li class="checked">Gen I - The first 99</li>
     <li>Collabs</li>
-    <li>Allow holders can rename their APP</li>
+    <li>Enable holders to rename their APP</li>
     <li>Gen II</li>
     <li class="joke">Transfer holders consciousness to their APP</li>
     <li class="joke">Take possession of holders bodies</li>
