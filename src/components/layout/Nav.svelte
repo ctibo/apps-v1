@@ -44,7 +44,7 @@
       </NavLink>
     </li>
     <li>
-      <NavLink href="/" title="The Apps">
+      <NavLink href="/" title="The Apps" strict={true}>
         <i class="fas fa-th"></i>
       </NavLink>
     </li>

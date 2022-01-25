@@ -1,7 +1,6 @@
 <script>
   import NftThumbnail from '../elements/NftThumbnail.svelte';
   export let nfts = [];
-  // let popup
 </script>
 
 <style lang="scss">

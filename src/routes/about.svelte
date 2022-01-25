@@ -1,6 +1,8 @@
 <script>
   import vars from '../vars';
-  import { shortenAddress } from '../helpers/address'
+  import { shortenAddress } from '../helpers/address';
+  import nfts from '../lib/nfts';
+  import LoadingInline from '../components/elements/LoadingInline.svelte'
 </script>
 
 <style lang="scss">
@@ -9,6 +11,12 @@
     margin-bottom: 1.5em;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
+    :global(.loading) {
+      font-size: 0.5em;
+      width: 4em;
+      margin: 0.25em 0;
+      display: inline-block;
+    }
   }
   .algos {
     display: inline-block;
@@ -33,16 +41,24 @@
   <div class="infos">
     <ul>
       <li>
+        Twitter:
+        <a class="text-link" href="https://twitter.com/apps_nft" target="_blank">
+          @apps_nft
+        </a> 
+      </li>
+      <li>
         Creator Account:
         <a class="text-link" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
           {shortenAddress(vars.CREATOR_ACCOUNT)}
         </a> 
       </li>
       <li>
-        Twitter:
-        <a class="text-link" href="https://twitter.com/apps_nft" target="_blank">
-          @apps_nft
-        </a> 
+        Minted: 
+        {#if $nfts && $nfts.loading}
+          <LoadingInline />
+        {:else}
+          {nfts.stats.minted}/99
+        {/if} 
       </li>
     </ul>
   </div>
@@ -55,7 +71,7 @@
   <p>
     The NFTs will be dropped 3 at a time. 
     The drops exact time will never be the same to try to accomodate collectors from all timezones.
-    Drops will be announced on Twitter.
+    Drops will be announced on Twitter a couple hours upfront.
   </p>
 
   <p>

@@ -2,9 +2,10 @@
   import { stores } from '@sapper/app';
   export let label;
   export let href;
+  export let strict = false;
   const { page } = stores();
   let active = false;
-  $: active = $page.path === href;
+  $: active = strict ? $page.path === href : $page.path.startsWith(href);
 </script>
 
 

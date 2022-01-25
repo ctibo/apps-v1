@@ -1,16 +1,7 @@
 <script>
-  import { onMount } from 'svelte';
-  import { getNfts } from '../lib/nfts';
+  import nfts from '../lib/nfts';
   import Grid from '../components/blocks/Grid.svelte'
   import LoadingInline from '../components/elements/LoadingInline.svelte';
-  let nfts = [];
-  let loading = false;
-  onMount(async () => {
-    loading = true;
-    nfts = await getNfts();
-    loading = false;
-  })
-
 </script>
 
 <style lang="scss">
@@ -35,12 +26,10 @@
     <span class="subtitle">Awesome Profile Pics</span>
   </h1>
 
-  {#if loading}
+  {#if $nfts && $nfts.loading}
     <LoadingInline />
   {:else}
-    {#key nfts.length}
-      <Grid {nfts} />
-    {/key}
+    <Grid nfts={nfts.gen1} />
   {/if}
 
 </div>
