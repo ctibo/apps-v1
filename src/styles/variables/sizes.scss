@@ -16,11 +16,12 @@ $breakpoint-xl: 1280px;
     --breakpoint-lg: #{$breakpoint-lg};
     --breakpoint-xl: #{$breakpoint-xl};
     --container-padding: 3vw;
-    --navbar-height: 4rem;
+    --navbar-height: 3rem;
   }
   @include min-width($breakpoint-sm) {
     :root {
       --container-padding: 1.5rem;
+      --navbar-height: 4rem;
     }
   }
 }

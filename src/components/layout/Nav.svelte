@@ -13,13 +13,16 @@
     background: var(--dark-blue);
     display: block;
     :global(a) {
-      font-size: 1.75em;
+      font-size: 1.375em;
       transform: scale(0.75);
       transition: transform 240ms var(--swing);
+      @include min-width($breakpoint-sm) {
+        font-size: 1.75em;
       }
-      :global(a.active) {
-        transform: scale(1);
-      }
+    }
+    :global(a.active) {
+      transform: scale(1);
+    }
   }
   ul {
     height: 100%;
