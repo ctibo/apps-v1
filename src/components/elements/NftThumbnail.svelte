@@ -16,8 +16,8 @@
     box-shadow: 0 0.5rem 1rem -0.25rem rgba(0,0,0,0.5);
     :global(.img-wrapper) {
       display: block;
-      width: 136%;
-      margin: -18%;
+      width: 138%;
+      margin: -19%;
     }
     :global(.loader) {
       padding: 10% 30%;

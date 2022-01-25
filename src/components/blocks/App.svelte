@@ -1,6 +1,7 @@
 <script>
   import { scale } from 'svelte/transition';
   import { shortenAddress } from '../../helpers/address';
+  import { getHash } from '../../helpers/ipfs';
   import vars from '../../vars';
   import AssetImg from '../elements/AssetImg.svelte';
   export let closeApp;
@@ -95,6 +96,12 @@
           ASA ID:
           <a class="text-link" href="https://www.nftexplorer.app/asset/{nft.index}" target="_blank">
             {nft.index}
+          </a> 
+        </li>
+        <li>
+          Original file:
+          <a class="text-link ipfs-hash" href="https://ipfs.io/ipfs/{getHash(nft.url)}" target="_blank">
+            {shortenAddress(getHash(nft.url)).toUpperCase()}
           </a> 
         </li>
         <li>

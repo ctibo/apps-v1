@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { fade } from 'svelte/transition';
   import LoadingInline from './LoadingInline.svelte';
-  import { gateways } from '../../helpers/ipfs';
+  import { gateways, getHash } from '../../helpers/ipfs';
   export let src;
   export let alt;
   export let loading = true;
@@ -13,7 +13,7 @@
 
   onMount(() => {
     if(src && src.startsWith('ipfs://')) {
-      hash = src.replace('ipfs://', '');
+      hash = getHash(src);
       getIpfsSrc();
     }
   })
