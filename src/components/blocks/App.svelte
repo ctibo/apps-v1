@@ -21,16 +21,16 @@
     top: 0;
     bottom: var(--navbar-height);
     padding: var(--container-padding);
-    background: rgba($dark-blue, 0.2);
     overflow: auto;
   }
   .window {
-    background: var(--dark-blue);
-    border-radius: 0.5rem;
     min-height: 100%;
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
+    border-radius: 0.5rem;
+    background: var(--dark-blue);
+    box-shadow: 0 0 4rem 0 rgba($purple, 0.5);
   }
   .content {
     flex-grow: 3;
