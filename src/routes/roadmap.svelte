@@ -25,7 +25,7 @@
     <li>Gen II</li>
     <li class="joke">Transfer holders consciousness to their APP</li>
     <li class="joke">Take possession of holders bodies</li>
-    <li class="joke">Infilrate Meta company</li>
+    <li class="joke">Infiltrate Meta company</li>
     <li class="joke">Replace Metaverse with APPverse</li>
     <li class="joke">Have a big party in the APPverse</li>
     <li class="joke">Conquer the world</li>
