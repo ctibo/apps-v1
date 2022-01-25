@@ -14,11 +14,6 @@
 	@import "../styles/global";
 </style>
 
-<svelte:head>
-	<title>APPs - Awesome Profile Pics</title>
-</svelte:head>
-
-
 <Frame>
 	<slot></slot>
 </Frame>
