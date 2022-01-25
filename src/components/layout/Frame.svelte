@@ -26,6 +26,7 @@
     pointer-events: none;
   }
   .inner-wrapper {
+    position: relative;
     flex-grow: 3;
     padding: 0 1%;
     overflow: hidden;
@@ -37,9 +38,9 @@
   }
   .container {
     width: 100%;
-    background-color: var(--content-bg-color);
     height: calc(100% - var(--navbar-height));
     padding: 0 var(--container-padding);
+    background-color: var(--content-bg-color);
     overflow: auto;
   }
   .hand {

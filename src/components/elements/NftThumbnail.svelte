@@ -8,6 +8,7 @@
 <style lang="scss">
   .wrapper {
     position: relative;
+    cursor: pointer;
   }
   .thumbnail {
     overflow: hidden;
@@ -46,25 +47,20 @@
     transform: translate(-10%, 50%) rotate(-12deg);
     pointer-events: none;
   }
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
 </style>
 
-<article class="wrapper">
+<article class="wrapper" on:click>
   {#if nft.tag && !loading}
     <span class="tag" transition:fade={{ duration: 300}}>
       {nft.tag}
     </span>
   {/if}
-  <a href={`https://www.nftexplorer.app/asset/${nft.index}`} target="_blank">
-    <div class="thumbnail">
-      <AssetImg src={nft.url} alt={nft['unit-name']} bind:loading />
-    </div>
-    <h2 class="thumbnail-title">
-      {nft['unit-name']}
-    </h2>
-  </a>
+  
+  <div class="thumbnail">
+    <AssetImg src={nft.url} alt={nft['unit-name']} bind:loading />
+  </div>
+  <h2 class="thumbnail-title">
+    {nft['unit-name']}
+  </h2>
+
 </article>

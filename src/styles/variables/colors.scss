@@ -69,6 +69,11 @@ $input-bg: #1d2c3c;
         #{rgba($light-purple, 0.25)}, 
         #{rgba($light-purple, 0)}
       );
+    --gradient-topbar: linear-gradient(
+        -45deg, 
+        #{rgba($light-purple, 0)},
+        #{rgba($light-purple, 0.15)} 
+      );
 
   }
 }

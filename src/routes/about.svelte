@@ -38,30 +38,30 @@
     </span>
   </h1>
 
-  <div class="infos">
-    <ul>
-      <li>
-        Twitter:
-        <a class="text-link" href="https://twitter.com/apps_nft" target="_blank">
-          @apps_nft
-        </a> 
-      </li>
-      <li>
-        Creator Account:
-        <a class="text-link" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
-          {shortenAddress(vars.CREATOR_ACCOUNT)}
-        </a> 
-      </li>
-      <li>
-        Minted: 
-        {#if $nfts && $nfts.loading}
-          <LoadingInline />
-        {:else}
-          {nfts.stats.minted}/99
-        {/if} 
-      </li>
-    </ul>
-  </div>
+
+  <ul class="infos">
+    <li>
+      Twitter:
+      <a class="text-link" href="https://twitter.com/apps_nft" target="_blank">
+        @apps_nft
+      </a> 
+    </li>
+    <li>
+      Creator Account:
+      <a class="text-link" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
+        {shortenAddress(vars.CREATOR_ACCOUNT)}
+      </a> 
+    </li>
+    <li>
+      Minted: 
+      {#if $nfts && $nfts.loading}
+        <LoadingInline />
+      {:else}
+        {nfts.stats.minted}/99
+      {/if} 
+    </li>
+  </ul>
+
 
   <p>
     APPs (Awesome Profile Pics) is an NFT project composed of 99 uniquely hand-drawn NFTs (1/1) on Algorand.
