@@ -30,7 +30,7 @@
     flex-flow: column nowrap;
     border-radius: 0.5rem;
     background: var(--dark-blue);
-    box-shadow: 0 0 4rem 0 rgba($purple, 0.5);
+    box-shadow: 0 0 3rem 0 rgba($purple, 0.33);
   }
   .content {
     flex-grow: 3;
