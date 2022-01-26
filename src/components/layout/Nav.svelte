@@ -7,11 +7,12 @@
   @import '../../styles/mixins';
   @import '../../styles/variables';
   nav {
+    display: block;
     width: 100%;
     padding: 0 1em;
     height: var(--navbar-height);
     background: var(--dark-blue);
-    display: block;
+    border-top: 1px solid var(--border-color);
     :global(a) {
       font-size: 1.375em;
       transform: scale(0.75);
