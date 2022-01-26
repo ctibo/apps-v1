@@ -27,19 +27,19 @@ export default class Read {
 			}))
 			.sort((a,b) => (b.number - a.number));
 	
-		// Get holders
-		await Promise.all(nfts.map(async (nft) => {
+			// Get holders
+			await Promise.all(nfts.map(async (nft) => {
 			const asset = await algoClient.lookupAssetBalances(nft.index, {
 				'currency-greater-than': 0,
 			})
 			nft.holder = asset.balances[0].address;
 			if (nft.holder === vars.CREATOR_ACCOUNT) {
 				nft.tag = 'Minted';
-				this.stats.minted += 1;
 			}
 		}));
-
+		
 		this.gen1 = nfts;
+		this.stats.minted = this.gen1.length;
 		this.loading = false;
 		this.dispatchUpdate();
 	}
