@@ -34,7 +34,7 @@ export default class Read {
 			})
 			nft.holder = asset.balances[0].address;
 			if (nft.holder === vars.CREATOR_ACCOUNT) {
-				nft.tag = 'Minted';
+				nft.tag = 'Soon';
 			}
 		}));
 		
