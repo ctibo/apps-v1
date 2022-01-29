@@ -1,5 +1,6 @@
 import algoClient from '../algoClient';
 import vars from '../../vars';
+import overrides from '../../nft-overrides';
 
 
 export default class Read {
@@ -20,6 +21,7 @@ export default class Read {
 			.map(asset => ({
 				...asset.params,
 				index: asset.index,
+				unit: asset.params['unit-name'],
 				number: Number(
 					asset.params['unit-name'].replace(vars.NFT_PREFIX, '')
 				),
@@ -35,6 +37,11 @@ export default class Read {
 			nft.holder = asset.balances[0].address;
 			if (nft.holder === vars.CREATOR_ACCOUNT) {
 				nft.tag = 'Soon';
+			}
+			if (overrides[nft.unit]) {
+				Object.entries(overrides[nft.unit]).forEach(([key, value]) => {
+					nft[key] = value;
+				});				
 			}
 		}));
 		

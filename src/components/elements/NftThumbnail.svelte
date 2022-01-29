@@ -57,10 +57,10 @@
   {/if}
   
   <div class="thumbnail">
-    <AssetImg src={nft.url} alt={nft['unit-name']} bind:loading />
+    <AssetImg src={nft.url} alt={nft.unit} bind:loading />
   </div>
   <h2 class="thumbnail-title">
-    {nft['unit-name']}
+    {nft.unit}
   </h2>
 
 </article>

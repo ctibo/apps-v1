@@ -71,6 +71,9 @@
     color: var(--dark-purple);
     background: var(--teal);
   }
+  .extra-link {
+    margin-top: 1em;
+  }
 </style>
 
 <svelte:window on:keydown={handleKeydown}/>
@@ -79,20 +82,20 @@
 
     <div class="top-bar">
       <span class="app-title">
-        {nft['unit-name']}
+        {nft.unit}
       </span>
       <button class="close-btn" on:click={closeApp}>
         <i class="fas fa-times"></i>
       </button>
     </div>
 
-    <AssetImg src={nft.url} alt={nft['unit-name']} />
+    <AssetImg src={nft.url} alt={nft.unit} />
 
     <div class="content">
 
       <ul class="infos">
         <li>
-          <strong>{nft['unit-name']}</strong>
+          <strong>{nft.unit}</strong>
         </li>
         <li>
           ASA ID:
@@ -112,6 +115,13 @@
             <span class="tag">Creator</span>
           {/if}
         </li>
+        {#if nft.link}
+          <li class="extra-link">
+            <a class="btn" href={nft.link.href} target="_blank">
+              {nft.link.label}
+            </a>
+          </li>
+        {/if}
       </ul>
 
     </div>
