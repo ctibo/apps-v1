@@ -59,6 +59,12 @@
       </a> 
     </li>
     <li>
+      Auctions on 
+      <a class="text-link" href="https://algoxnft.com/collection/apps" target="_blank">
+        ALGOxNFT
+      </a> 
+    </li>
+    <li>
       Minted: 
       {#if $nfts && $nfts.loading}
         <LoadingInline />
@@ -75,8 +81,8 @@
   </p>
 
   <p>
-    The NFTs will be dropped 3 at a time. 
-    The drops exact time will never be the same to try to accomodate collectors from all timezones.
+    NFTs will be dropped 3 at a time. 
+    The drops don't follow a predefined schedule. 
     Drops will be announced on Twitter a couple hours upfront.
   </p>
 
