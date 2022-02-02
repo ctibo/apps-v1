@@ -54,7 +54,7 @@
     </li>
     <li>
       Dropping on 
-      <a class="text-link" href="https://www.randgallery.com/algo-collection/?address={vars.CREATOR_ACCOUNT}" target="_blank">
+      <a class="text-link" href="https://www.randgallery.com/collection/apps-awesome-profile-pics" target="_blank">
         RandGallery
       </a> 
     </li>
