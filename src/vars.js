@@ -11,8 +11,8 @@ const testnet = {
 }
 
 const mainnet = {
-  API_URL: 'https://mainnet-api.algonode.cloud',
-  INDEXER_URL: 'https://mainnet-idx.algonode.cloud',
+  API_URL: 'https://node.algoexplorerapi.io',
+  INDEXER_URL: 'https://algoindexer.algoexplorerapi.io',
   CREATOR_ACCOUNT: 'APPS6P4CEXCIYI25BNDO46QSNIVVBIYR7SS5BNUZIMMTFW6GNS7UKXVAGM',
 }
 
