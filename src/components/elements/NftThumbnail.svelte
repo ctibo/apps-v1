@@ -11,13 +11,18 @@
     cursor: pointer;
   }
   .thumbnail {
+    position: relative;
+    padding-top: 100%;
     overflow: hidden;
     border-radius: 15%;
     box-shadow: 0 0.5rem 1rem -0.25rem rgba(0,0,0,0.5);
     :global(.img-wrapper) {
       display: block;
+      position: absolute;
       width: 138%;
-      margin: -19%;
+      height: 138%;
+      left: -19%;
+      top: -19%;
     }
     :global(.loader) {
       padding: 10% 30%;

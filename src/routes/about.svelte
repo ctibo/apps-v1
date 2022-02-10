@@ -26,6 +26,34 @@
     margin-left: 0.125em;
     vertical-align: baseline;
   }
+
+  .tiles  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5em;
+    margin-bottom: 1em;
+    text-align: center;
+    span, 
+    .text-link {
+      display: block;
+      font-size: 0.75em;
+    }
+  }
+  .tile {
+    display: block;
+    background: var(--dark-gray);
+    border-radius: 0.75em;
+    box-shadow: 0 0 2em -0.75em var(--purple);
+    transition: box-shadow 240ms ease;
+    &:hover {
+      box-shadow: 0 0 2em -0.25em var(--purple);
+    }
+    img {
+      width: 75%;
+      margin: 12.5%;
+    }
+    margin-bottom: 1em;
+  }
 </style>
 
 <div class="content">
@@ -39,31 +67,48 @@
   </h1>
 
 
-  <ul class="infos">
+  <ul class="tiles">
     <li>
-      Twitter:
-      <a class="text-link" href="https://twitter.com/apps_nft" target="_blank">
-        @apps_nft
+      <a class="tile" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
+        <img src="/images/nftexplorer-logo.png" alt="NFT Explorer" />
       </a> 
-    </li>
-    <li>
-      Creator Account:
+      <span>
+        Stats
+      </span>
       <a class="text-link" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
-        {shortenAddress(vars.CREATOR_ACCOUNT)}
+        NFT Explorer
       </a> 
     </li>
+
     <li>
-      Dropping on 
+      <a class="tile" href="https://www.randgallery.com/collection/apps-awesome-profile-pics" target="_blank">
+        <img src="/images/rand-logo.png" alt="Rand Gallery" />
+      </a> 
+      <span>
+        Reg drops
+      </span>
       <a class="text-link" href="https://www.randgallery.com/collection/apps-awesome-profile-pics" target="_blank">
-        RandGallery
-      </a> 
+        Rand Gallery
+      </a>
     </li>
+
     <li>
-      Auctions on 
+      <a class="tile" href="https://algoxnft.com/collection/apps" target="_blank">
+        <img src="/images/algoxnft-logo.png" alt="ALGOxNFT" />
+      </a>
+      <span>
+        Auctions
+      </span>
       <a class="text-link" href="https://algoxnft.com/collection/apps" target="_blank">
         ALGOxNFT
-      </a> 
+      </a>
     </li>
+
+  </ul>
+
+
+  <ul class="infos">
+
     <li>
       Minted: 
       {#if $nfts && $nfts.loading}
@@ -72,6 +117,22 @@
         {nfts.stats.minted}/99
       {/if} 
     </li>
+
+    <li>
+      Twitter:
+      <a class="text-link" href="https://twitter.com/apps_nft" target="_blank">
+        @apps_nft
+      </a> 
+    </li>
+
+    <li>
+      Creator Account:
+      <a class="text-link" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
+        {shortenAddress(vars.CREATOR_ACCOUNT)}
+      </a> 
+    </li>
+
+    
   </ul>
 
 

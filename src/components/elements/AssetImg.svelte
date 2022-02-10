@@ -60,14 +60,14 @@
 
 {#if src}
   <div class="img-wrapper">
-    <img 
+    <img
       on:load={loaded}
       on:error={failed}
       {src} 
       {alt}
       />
     {#if loading }
-      <div class="loader" out:fade={{ duration: 300}}>
+      <div class="loader" out:fade|local={{ duration: 300}}>
         <LoadingInline />
       </div>
     {/if}
