@@ -64,8 +64,8 @@
       on:load={loaded}
       on:error={failed}
       {src} 
-      {alt} 
-    />
+      {alt}
+      />
     {#if loading }
       <div class="loader" out:fade={{ duration: 300}}>
         <LoadingInline />
