@@ -29,8 +29,8 @@ export default class Read {
 			}))
 			.sort((a,b) => (b.number - a.number));
 	
-			// Get holders
-			await Promise.all(nfts.map(async (nft) => {
+		// Get holders
+		await Promise.all(nfts.map(async (nft) => {
 			const asset = await algoClient.lookupAssetBalances(nft.index, {
 				'currency-greater-than': 0,
 			})
