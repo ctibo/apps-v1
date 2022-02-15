@@ -7,6 +7,7 @@
   import LoadingInline from '../components/elements/LoadingInline.svelte';
   let loading = true;
   let secondary = [];
+  let entries = [];
   $: $nfts, getStats();
 
   async function getStats() {
@@ -50,6 +51,10 @@
 		}));
 
     secondary = secondary.sort((a,b) => b.price - a.price);
+    secondary.forEach(txn => {
+      if (!entries.includes(txn.buyer)) entries.push(txn.buyer);
+      if (!entries.includes(txn.seller)) entries.push(txn.seller);
+    });
     console.log(secondary)
     loading = false;
   }
@@ -66,6 +71,17 @@
   td, th {
     padding: 1em 0;
     border-bottom: 1px solid var(--border-color);
+  }
+  td {
+    font-size: 0.875em;
+  }
+  .arrow {
+    padding: 0 0.5em;
+    text-align: center;
+  }
+  .seller,
+  .price {
+    text-align: right;
   }
   .algos {
     display: inline-block;
@@ -92,19 +108,24 @@
     {/if}
 
     {#if secondary.length}
+
+      <h2>{entries.length} trading accounts</h2>
+
       <table>
         <tr>
           <th>APP</th>
+          <th class="seller">Seller</th>
+          <th class="arrow"></th>
           <th>Buyer</th>
-          <th>Seller</th>
-          <th>Price</th>
+          <th class="price">Price</th>
         </tr>
         {#each secondary as txn }
           <tr>
             <td>{txn.unit}</td>
+            <td class="seller">{shortenAddress(txn.seller)}</td>
+            <td class="arrow">➞</td>
             <td>{shortenAddress(txn.buyer)}</td>
-            <td>{shortenAddress(txn.seller)}</td>
-            <td>{txn.price}<img class="algos" src="/images/algo-logo.svg" alt="Algos" /></td>
+            <td class="price">{txn.price}<img class="algos" src="/images/algo-logo.svg" alt="Algos" /></td>
           </tr>
         {/each}
       </table>
