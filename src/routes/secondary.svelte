@@ -109,7 +109,7 @@
 
     {#if secondary.length}
 
-      <h2>{entries.length} trading accounts</h2>
+      <h2>{entries.length} unique traders</h2>
 
       <table>
         <tr>
