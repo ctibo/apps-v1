@@ -5,9 +5,10 @@
 <style lang="scss">
   ul {
     display: flex;
+    font-size: clamp(0.75rem, 3vw, 1rem);
     flex-flow: row nowrap;
     border-bottom: 2px solid var(--border-color);
-    margin: 1em 0 1.5em;
+    margin: 0.875em 0 1.5em;
   }
   li {
     width: 50%;
@@ -16,6 +17,7 @@
     width: 100%;
     color: var(--blue);
     display: inline-block;
+    font-size: 1em;
     padding: 0.5em 1em;
     text-align: center;
     text-transform: uppercase;
