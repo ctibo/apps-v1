@@ -1,4 +1,5 @@
 <script>
+  import { tick } from 'svelte';
   import { uniqBy } from 'lodash';
   import algoClient from '../lib/algoClient';
   import nfts from '../lib/nfts';
@@ -8,7 +9,10 @@
   let loading = true;
   let secondary = [];
   let entries = [];
+  let winner = false;
+  let winnerPicked = false;
   $: $nfts, getStats();
+
 
   async function getStats() {
     if (!nfts.gen1.length) return;
@@ -46,8 +50,6 @@
         });
 
       }));
-
-
 		}));
 
     secondary = secondary.sort((a,b) => b.price - a.price);
@@ -57,6 +59,16 @@
     });
     console.log(secondary)
     loading = false;
+  }
+
+
+
+  async function pickWinner() {
+    if (!entries.length) return;
+    winner = entries[Math.floor( Math.random() * entries.length )];
+    requestAnimationFrame(() => {
+      winnerPicked = true;
+    })
   }
 </script>
 
@@ -91,6 +103,43 @@
     margin-left: 0.125em;
     vertical-align: baseline;
   }
+
+  .winner-wrapper {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+  .winner-label {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &.hidden {
+      &:before {
+        transform: translateX(-110%) skew(-6deg);
+      }
+      .address {
+        opacity: 0;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: var(--gradient-purple);
+      transform: translateX(110%) skew(-6deg);
+      transition: transform 480ms var(--ease);
+    }
+    .address {
+      display: inline-block;
+      font-size: 1.5em;
+      padding: 0.25em 0;
+      opacity: 1;
+      transition: opacity 0ms var(--ease) 240ms;
+    }
+  }
 </style>
 
 <div class="content">
@@ -109,8 +158,23 @@
 
     {#if secondary.length}
 
-      <h2>{entries.length} unique traders</h2>
+      <div class="winner-wrapper">
+        {#if !winner}  
+          <button class="btn" on:click={pickWinner}>
+            Pick a winner
+          </button>
 
+        {:else}
+          <span class="winner-label" class:hidden={!winnerPicked}>
+            <span class="address">
+              {shortenAddress(winner)}
+            </span>
+          </span>
+        {/if}
+      </div>
+
+
+      <h3>{entries.length} unique traders</h3>
       <table>
         <tr>
           <th>APP</th>
