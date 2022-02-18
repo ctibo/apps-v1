@@ -36,7 +36,7 @@
     span, 
     .text-link {
       display: block;
-      font-size: 0.75em;
+      font-size: clamp(0.5em, 2vw, 0.75em);
     }
   }
   .tile {

@@ -1,19 +1,19 @@
 export default {
-  // 'APP-25': {
+  // 'APP-31': {
   //   tag: 'Auction',
   //   link: {
   //     label: 'Go to auction',
   //     href: 'https://algoxnft.com/collection/apps', 
   //   },
   // },
-  // 'APP-26': {
+  // 'APP-32': {
   //   tag: 'Auction',
   //   link: {
   //     label: 'Go to auction',
   //     href: 'https://algoxnft.com/collection/apps', 
   //   },
   // }, 
-  // 'APP-27': {
+  // 'APP-33': {
   //   tag: 'Auction',
   //   link: {
   //     label: 'Go to auction',

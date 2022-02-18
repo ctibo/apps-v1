@@ -21,7 +21,8 @@
   <ol class="list">
     <li class="checked">Gen I - The first 99</li>
     <li>Collabs</li>
-    <li>Arc69 traits, updatable by holders </li>
+    <li>Arc69: Rename your APP</li>
+    <li>Arc69 Game: Updates <small>vs</small> Bugs</li>
     <li>Gen II</li>
     <li class="joke">Transfer holders consciousness to their APP</li>
     <li class="joke">Take possession of holders bodies</li>

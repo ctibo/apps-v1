@@ -56,7 +56,7 @@
 
 <article class="wrapper" on:click>
   {#if nft.tag && !loading}
-    <span class="tag" transition:fade={{ duration: 300}}>
+    <span class="tag" transition:fade|local={{ duration: 300}}>
       {nft.tag}
     </span>
   {/if}
