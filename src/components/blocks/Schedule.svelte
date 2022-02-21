@@ -45,7 +45,7 @@
 
     <tr>
       <td>Wed. Feb 23 to <br/>Thu. Feb 24 <br/>4PM UTC</td>
-      <td>APP Collab #1<br/> 24H Twitter Auction <br/> All proceeds to charity</td>
+      <td>APP #MNGO<br/> 24H Twitter Auction <br/> All proceeds to charity</td>
     </tr>
 
     <tr>
