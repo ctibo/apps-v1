@@ -19,7 +19,7 @@ body {
   position: relative;
   z-index: 1;
   @extend %title;  
-  color: var(--white);
+  color: var(--teal);
   font-size: clamp(1.6rem, 7vw, 2.3rem);
   line-height: 0.75em;
   font-weight: bold;
@@ -40,7 +40,7 @@ body {
   font-size: clamp(1.25rem, 4vw, 1.5rem);
   line-height: 1.2;
   font-weight: bold;
-  margin: 1.5em 0 0.75em;
+  margin: 1.5em 0 0.5em;
 }
 
 .content-title {
@@ -161,4 +161,18 @@ ol.list {
       bottom: calc(100% - 0.5em);
     }
   }
+}
+
+
+//
+// Algos icon
+// ----------------------------------------------
+
+.algos {
+  display: inline-block;
+  width: auto;
+  font-size: 0.625em;
+  height: 1em;
+  margin-left: 0.125em;
+  vertical-align: baseline;
 }
