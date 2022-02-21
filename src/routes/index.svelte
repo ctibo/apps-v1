@@ -38,9 +38,7 @@
     {#if currentGrid === '99'}
       <Grid nfts={nfts.gen1} />
     {:else if currentGrid === 'collabs'}
-      <h2 class="content-title">
-        Starting Feb 21
-      </h2>
+      <Grid nfts={nfts.collabs} />
     {/if}
   
   {/if}
