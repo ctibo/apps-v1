@@ -39,23 +39,19 @@
     </tr>
 
     <tr>
-      <td>Mon. Feb 21 to <br/>Tue. Feb 22 <br/>4PM UTC</td>
-      <td>APP #37-38-39 <br/> 24H Auction <br/>ALGOxNFT</td>
+      <td>Mon. Feb 28 to <br/>Tue. Mar 01 <br/>9PM UTC</td>
+      <td>APP #43-44-45 <br/> 24H Auction <br/>ALGOxNFT</td>
     </tr>
 
     <tr>
-      <td>Wed. Feb 23 to <br/>Thu. Feb 24 <br/>4PM UTC</td>
-      <td>APP #MNGO<br/> 24H Twitter Auction <br/> All proceeds to charity</td>
+      <td>Wed. Mar 02</td>
+      <td>Discord Launch<br/> (fingers crossed)</td>
     </tr>
 
     <tr>
-      <td>Fri. Feb 25 to <br/>Sun. Feb 27 <br/>4PM UTC</td>
-      <td>APP #42<br/> Twitter art contest</td>
+      <td>Fri. Mar 04 <br/>9PM UTC</td>
+      <td>APP #46-47-48<br/> Discord Shuffle</td>
     </tr>
 
-    <tr>
-      <td>Sun. Feb 27 <br/>4PM UTC</td>
-      <td>APP #40-41<br/> Regular drop <br/> Rand Gallery</td>
-    </tr>
   </table>
 </div>
