@@ -158,7 +158,7 @@
 
     {#if secondary.length}
 
-      <div class="winner-wrapper">
+      <!-- <div class="winner-wrapper">
         {#if !winner}  
           <button class="btn" on:click={pickWinner}>
             Pick a winner
@@ -171,7 +171,7 @@
             </span>
           </span>
         {/if}
-      </div>
+      </div> -->
 
 
       <h3>{entries.length} unique traders</h3>
