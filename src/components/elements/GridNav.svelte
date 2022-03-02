@@ -1,5 +1,8 @@
 <script>
+  import { stores } from '@sapper/app';
   export let currentGrid = '99';
+  const { page } = stores();
+  $: currentGrid = $page.query.nfts || '99'; 
 </script>
 
 <style lang="scss">
@@ -13,7 +16,7 @@
   li {
     width: 50%;
   }
-  button {
+  a {
     width: 100%;
     color: var(--blue);
     display: inline-block;
@@ -24,6 +27,9 @@
     background: none;
     border: none;
     outline: none;
+    &:hover {
+      text-decoration: none;
+    }
     &.active {
       color: var(--white);
       font-weight: bold;
@@ -35,20 +41,19 @@
 <nav>
   <ul>
     <li>
-      <button
-        class:active={currentGrid === '99'} 
-        on:click={() => currentGrid = '99'}
+      <a href="?nfts=99"
+        class:active={currentGrid === '99'}
       >
         99 APPs
-      </button>
+      </a>
     </li>
     <li>
-      <button
+      <a
+        href="?nfts=collabs"
         class:active={currentGrid === 'collabs'} 
-        on:click={() => currentGrid = 'collabs'}
       >
         Collabs
-      </button>
+      </a>
     </li>
   </ul>
 </nav>
