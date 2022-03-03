@@ -43,17 +43,9 @@
         {nfts.stats.minted}/99
       {/if} 
     </li>
-
-    <li>
-      Twitter:
-      <a class="text-link" href="https://twitter.com/apps_nft" target="_blank">
-        @apps_nft
-      </a> 
-    </li>
-
     <li>
       Creator Account:
-      <a class="text-link" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
+      <a class="text-link" href="https://algoexplorer.io/address/{vars.CREATOR_ACCOUNT}" target="_blank">
         {shortenAddress(vars.CREATOR_ACCOUNT)}
       </a> 
     </li>

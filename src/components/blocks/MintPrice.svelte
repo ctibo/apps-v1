@@ -3,7 +3,9 @@
 </script>
 
 <style lang="scss">
-  
+  .done {
+    text-decoration: line-through;
+  }
 </style>
 
 
@@ -15,16 +17,16 @@
 </p>
 
 <ul class="list">
-  <li>
+  <li class="done">
     #01-24 ➞ 33<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
-  <li>
+  <li class="">
     #25-48 ➞ 44<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
-  <li>
+  <li class="">
     #49-72 ➞ 55<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
-  <li>
+  <li class="">
     #73-99 ➞ 66<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
 </ul> 
