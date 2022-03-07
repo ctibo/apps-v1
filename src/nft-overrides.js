@@ -20,5 +20,25 @@ export default {
     //   href: 'https://algoxnft.com/collection/apps', 
     // },
   },
-  
+  'APP-52': {
+    tag: 'Shuffle soon',
+    // link: {
+    //   label: 'Go to auction',
+    //   href: 'https://algoxnft.com/collection/apps', 
+    // },
+  },
+  'APP-53': {
+    tag: 'Shuffle soon',
+    // link: {
+    //   label: 'Go to auction',
+    //   href: 'https://algoxnft.com/collection/apps', 
+    // },
+  }, 
+  'APP-54': {
+    tag: 'Shuffle soon',
+    // link: {
+    //   label: 'Go to auction',
+    //   href: 'https://algoxnft.com/collection/apps', 
+    // },
+  },
 }

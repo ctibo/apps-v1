@@ -38,7 +38,7 @@
     margin: 0.5em 0 0;
   }
   .tag {
-    display: inline-block;
+    display: inline;
     font-size: clamp(0.375em, 1.75vw, 0.625em);
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -49,7 +49,7 @@
     z-index: 2;
     top: 0;
     left: 0;
-    transform: translate(-10%, 50%) rotate(-12deg);
+    transform: translate(-10%, 50%) rotate(-9deg);
     pointer-events: none;
   }
 </style>
