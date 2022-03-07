@@ -34,23 +34,13 @@
     </tr>
 
     <tr>
-      <td>Mon. Feb 21</td>
-      <td>Mint first collab</td>
+      <td>Tue Mar 8<sup>th</sup> <br/>to Wed Mar 9<sup>th</sup> <br/>9PM UTC</td>
+      <td>APP #49-50-51 <br/> 24H Auction <br/>ALGOxNFT</td>
     </tr>
 
     <tr>
-      <td>Mon. Feb 28 to <br/>Tue. Mar 01 <br/>9PM UTC</td>
-      <td>APP #43-44-45 <br/> 24H Auction <br/>ALGOxNFT</td>
-    </tr>
-
-    <tr>
-      <td>Wed. Mar 02</td>
-      <td>Discord Launch<br/> (fingers crossed)</td>
-    </tr>
-
-    <tr>
-      <td>Fri. Mar 04 <br/>9PM UTC</td>
-      <td>APP #46-47-48<br/> Discord Shuffle</td>
+      <td>Thu Mar 10<sup>th</sup> <br/>to Fri Mar 11<sup>th</sup> <br/>9PM UTC</td>
+      <td>APP #52-53-54 <br/> 24H Discord Shuffle</td>
     </tr>
 
   </table>

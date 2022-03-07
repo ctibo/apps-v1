@@ -39,7 +39,7 @@
   }
   .tag {
     display: inline-block;
-    font-size: 0.625em;
+    font-size: clamp(0.375em, 1.75vw, 0.625em);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 0.125em 0.5em;

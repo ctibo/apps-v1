@@ -20,7 +20,7 @@
   <li class="done">
     #01-24 ➞ 33<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
-  <li class="">
+  <li class="done">
     #25-48 ➞ 44<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
   <li class="">
