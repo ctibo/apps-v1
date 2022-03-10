@@ -1,0 +1,16 @@
+table {
+  width: 100%;
+}
+td, th {
+  border-bottom: 1px solid var(--border-color);
+}
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 0.25em 1em 0;
+}
+td {
+  padding: 1em 0.25em 1em 0;
+  vertical-align: top;
+  font-size: clamp(0.75em, 2.5vw, 0.875em);
+}
