@@ -3,9 +3,10 @@
   import { shortenAddress } from '../helpers/address';
   import nfts from '../lib/nfts';
   import LoadingInline from '../components/elements/LoadingInline.svelte';
+  import QuickLinks from '../components/blocks/QuickLinks.svelte';
   import Schedule from '../components/blocks/Schedule.svelte';
   import MintPrice from '../components/blocks/MintPrice.svelte';
-  import QuickLinks from '../components/blocks/QuickLinks.svelte';
+  import Roadmap from '../components/blocks/Roadmap.svelte';
 </script>
 
 <style lang="scss">
@@ -57,7 +58,7 @@
   </p>
 
   <Schedule />
-
   <MintPrice />
+  <Roadmap />
  
 </div>

@@ -48,6 +48,7 @@ export default class Read {
 			
 		}));
 		
+		this.all = nfts;
 		this.gen1 = nfts.filter(nft => nft.number).sort((a,b) => (b.number - a.number));
 		this.collabs = nfts.filter(nft => !nft.number);
 

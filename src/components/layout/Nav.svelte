@@ -53,8 +53,8 @@
       </NavLink>
     </li>
     <li>
-      <NavLink href="/roadmap" title="Roadmap">
-        <i class="fas fa-map"></i>
+      <NavLink href="/stats" title="Stats">
+        <i class="fas fa-chart-line"></i>
       </NavLink>
     </li>
   </ul>
