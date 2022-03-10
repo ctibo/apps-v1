@@ -5,7 +5,7 @@
 <style lang="scss">
   .tiles  {
     display: grid;
-    grid-gap: 1.5em;
+    grid-gap: 0.5em;
     margin-bottom: 1em;
     text-align: center;
     span, 
@@ -27,6 +27,7 @@
     border-radius: 0.75em;
     box-shadow: 0 0 2em -0.75em var(--purple);
     transition: box-shadow 240ms ease;
+    margin-bottom: 0.75em;
     &:hover {
       box-shadow: 0 0 2em -0.25em var(--purple);
     }
@@ -35,7 +36,6 @@
       margin: 12.5%;
     }
     
-    margin-bottom: 1em;
   }
 
   .badge {

@@ -14,7 +14,7 @@
 
   <ol class="list">
     <li class="checked">Gen I - The first 99</li>
-    <li>Collabs</li>
+    <li class="checked">Collabs</li>
     <li>Arc69: Rename your APP</li>
     <li>APPs, the game</li>
     <li>Gen II</li>
