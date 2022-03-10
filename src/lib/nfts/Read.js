@@ -60,12 +60,14 @@ export default class Read {
 		
 		this.loading = false;
 		this.statsLoading = true;
+		
 		this.dispatchUpdate();
 
 		await this.getSalesData();
 		// await this.getHoldersData();
 
 		this.statsLoading = false;
+		await tick();
 		this.dispatchUpdate();
 	}
 
