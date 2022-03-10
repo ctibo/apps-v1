@@ -28,8 +28,8 @@ export default class Read {
 				tag: false,
 			}));
 	
-			// Get holders
-			await Promise.all(nfts.map(async (nft) => {
+		// Get holders
+		await Promise.all(nfts.map(async (nft) => {
 			const asset = await algoClient.lookupAssetBalances(nft.index, {
 				'currency-greater-than': 0,
 			})
