@@ -55,5 +55,15 @@ export default class Read {
 		this.stats.minted = this.gen1.length;
 		this.loading = false;
 		this.dispatchUpdate();
+
+		this.getStats();
+	}
+
+
+	//
+	// Get stats
+	// ----------------------------------------------
+	async getStats() {
+		
 	}
 }
