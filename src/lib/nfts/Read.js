@@ -114,17 +114,29 @@ export default class Read {
 		// Set cache
 		accounts.set($accounts);
 
-		// get stats
+		// group holders
+		
 		const holders = groupBy(
 			this.all.filter(nft => nft.holder !== vars.CREATOR_ACCOUNT),
 			'holder'
 		);
+		this.stats.holders = Object.entries(holders)
+		.map(([address, nfts]) => ({ address, nfts, qty: nfts.length }))
+		.sort((a,b) => b.qty - a.qty);
+		
+		// get total
+		this.stats.totalHolders = this.stats.holders.length;
 
-		this.stats.topHolders = Object.entries(holders)
-			.map(([address, nfts]) => ({ address, nfts }))
-			.filter(holder => holder.nfts.length > 1)
-			.sort((a,b) => b.nfts.length - a.nfts.length);
-
+		// distribution
+		const distribution = groupBy(this.stats.holders, 'qty');
+		this.stats.holdersDistribution = Object.entries(distribution)
+			.map(([nftsQty, addresses]) => ({ 
+				nftsQty,
+				holdersQty: addresses.length,  
+				ratio: addresses.length/this.stats.totalHolders,
+				addresses, 
+			}))
+			.sort((a,b) => b.nftsQty - a.nftsQty);
 	}
 
 

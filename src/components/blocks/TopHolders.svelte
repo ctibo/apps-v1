@@ -13,9 +13,6 @@
   .qty {
     text-align: right;
   }
-  .blur {
-    filter: blur(2px);
-  }
 </style>
 
 {#if holders.length}
@@ -28,7 +25,7 @@
     </tr>
     {#each holders as holder (holder.address)}
       <tr>
-        <td class="address blur">{shortenAddress(holder.address)}</td>
+        <td class="address">{shortenAddress(holder.address)}</td>
         <td class="qty">{holder.nfts.length} APPs</td>
       </tr>
     {/each}

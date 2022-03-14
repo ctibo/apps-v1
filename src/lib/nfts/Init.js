@@ -10,7 +10,9 @@ export default class Init {
     this.stats = {
       minted: 0,
       highestSales: [],
-      topHolders: [],
+      holders: [],
+      holdersDistribution: [],
+      totalHolders: 0,
     }
   }
   
