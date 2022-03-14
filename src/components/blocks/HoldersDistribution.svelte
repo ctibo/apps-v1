@@ -49,7 +49,7 @@
     </tr>
     {#each distribution as segment (segment.nftsQty)}
       <tr class="segment">
-        <td class="nfts">{segment.nftsQty} APPs</td>
+        <td class="nfts">{segment.nftsQty} APP{segment.nftsQty>1?'s':''}</td>
         <td class="holders">
           {segment.holdersQty} Holder{segment.holdersQty>1?'s':''} ({Math.round(segment.ratio*1000)/10}%)
           <div class="bg" style="width: {Math.round(segment.ratio*1000)/10}%" />
