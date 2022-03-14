@@ -1,4 +1,5 @@
 import { persist, indexedDBStorage } from "@macfja/svelte-persistent-store"
 import { writable } from "svelte/store"
 
-export const nftsData = persist(writable({}), indexedDBStorage(), 'nftsTxns');
+export const sales = persist(writable({}), indexedDBStorage(), 'sales');
+export const accounts = persist(writable({}), indexedDBStorage(), 'accounts');

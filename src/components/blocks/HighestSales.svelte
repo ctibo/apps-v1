@@ -25,7 +25,7 @@
 </style>
 
 {#if nfts.length}
-  <h2 class="section-title">Highest Valued</h2>
+  <h2 class="section-title">Most Valued</h2>
 
   <table class="highest-sales">
     <tr>
