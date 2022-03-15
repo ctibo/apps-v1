@@ -20,6 +20,13 @@ export default {
       href: 'https://algoxnft.com/collection/apps', 
     },
   },
+  'APP-HAND': {
+    tag: 'Thooooon',
+    // link: {
+    //   label: 'Go to auction',
+    //   href: 'https://algoxnft.com/collection/apps', 
+    // },
+  },
   // 'APP-52': {
   //   tag: 'Shuffle',
   //   link: {
