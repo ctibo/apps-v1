@@ -1,10 +1,10 @@
 export default {
   'APP-HAND': {
-    tag: 'Thooooon',
-    // link: {
-    //   label: 'Go to auction',
-    //   href: 'https://algoxnft.com/collection/apps', 
-    // },
+    tag: 'Auction',
+    link: {
+      label: 'Hans Discord',
+      href: 'https://discord.gg/ksZqFnA9', 
+    },
   },
   'APP-58': {
     tag: 'Shuffle',
