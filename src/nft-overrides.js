@@ -1,11 +1,11 @@
 export default {
-  'APP-HAND': {
-    tag: 'Auction',
-    link: {
-      label: 'Hans Discord',
-      href: 'https://discord.gg/ksZqFnA9', 
-    },
-  },
+  // 'APP-HAND': {
+  //   tag: 'Auction',
+  //   link: {
+  //     label: 'Hans Discord',
+  //     href: 'https://discord.gg/ksZqFnA9', 
+  //   },
+  // },
   // 'APP-58': {
   //   tag: 'Shuffle',
   //   link: {
