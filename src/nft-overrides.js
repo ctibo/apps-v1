@@ -6,25 +6,25 @@ export default {
   //     href: 'https://discord.gg/ksZqFnA9', 
   //   },
   // },
-  // 'APP-58': {
-  //   tag: 'Shuffle',
-  //   link: {
-  //     label: 'Enter Discord Shuffle',
-  //     href: 'https://discord.gg/8JFAbK6ktp', 
-  //   },
-  // },
-  // 'APP-59': {
-  //   tag: 'Shuffle',
-  //   link: {
-  //     label: 'Enter Discord Shuffle',
-  //     href: 'https://discord.gg/8JFAbK6ktp', 
-  //   },
-  // }, 
-  // 'APP-60': {
-  //   tag: 'Shuffle',
-  //   link: {
-  //     label: 'Enter Discord Shuffle',
-  //     href: 'https://discord.gg/8JFAbK6ktp', 
-  //   },
-  // },
+  'APP-61': {
+    tag: 'Auction',
+    link: {
+      label: 'Go to Auction',
+      href: 'https://algoxnft.com/collection/apps', 
+    },
+  },
+  'APP-62': {
+    tag: 'Auction',
+    link: {
+      label: 'Go to Auction',
+      href: 'https://algoxnft.com/collection/apps', 
+    },
+  }, 
+  'APP-63': {
+    tag: 'Auction',
+    link: {
+      label: 'Go to Auction',
+      href: 'https://algoxnft.com/collection/apps', 
+    },
+  },
 }
