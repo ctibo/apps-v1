@@ -66,10 +66,52 @@
       transform: translate(28.5%, 11.5%);
     }
   }
+  .tiny-eyes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4.2% 9% 0;
+    line-height: 0;
+    text-align: right;
+    white-space: nowrap;
+    &:before, 
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: top;
+      width: 1em;
+      height: 1em;
+      font-size: clamp(0.5rem, 2.5vw, 1rem);
+      background: url('/images/tiny-eyes.png') top left no-repeat;
+      background-size: 1em auto;
+      animation: wink infinite 30s steps(1, end);
+    }
+    &:after {
+      margin-left: 0.125em;
+      animation-delay: 60ms;
+    }
+  }
+
+  $stepSize: 8;
+  @function randomNext($i) {
+    @return random($stepSize) + ($i + random($stepSize) - 5);
+  }
+  $i: randomNext($stepSize);
+  @keyframes wink {
+    0%, 100% { background-position: 0 0; }
+    @while $i < 99 {
+      #{($i - 0.5) * 1%} { background-position: 0 0; }
+      #{($i) * 1%} { background-position: 0 -1em; }
+      #{($i + 0.5) * 1%} { background-position: 0 0; }
+      $i: $i + randomNext($i);
+    }
+  }
 </style>
 
 
 <div class="wrapper">
+  <div class="tiny-eyes"/>
   <img src="/images/frame-top.png" alt=""/>
 
   <div class="inner-wrapper">
