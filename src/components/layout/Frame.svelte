@@ -112,7 +112,7 @@
 
 <div class="wrapper">
   <div class="tiny-eyes"/>
-  <img src="/images/frame-top.png" alt=""/>
+  <img src="/images/frame-top.png?t=2" alt=""/>
 
   <div class="inner-wrapper">
     <main class="container">
