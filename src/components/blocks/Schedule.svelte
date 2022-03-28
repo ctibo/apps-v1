@@ -19,7 +19,7 @@
     </tr>
 
     <tr>
-      <td>Mon Mar 29<sup>th</sup> <br/>to Tue Mar 30<sup>th</sup> <br/>8PM UTC</td>
+      <td>Tue Mar 29<sup>th</sup> <br/>to Wed Mar 30<sup>th</sup> <br/>8PM UTC</td>
       <td>APP #67-68-69 <br/> 24H Auction <br/>ALGOxNFT</td>
     </tr>
 
