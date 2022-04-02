@@ -53,8 +53,10 @@ export default class Read {
 		}));
 		
 		this.all = nfts;
-		this.gen1 = nfts.filter(nft => nft.number).sort((a,b) => (b.number - a.number));
-		this.collabs = nfts.filter(nft => !nft.number);
+		this.gen1 = nfts.filter(nft => nft.number)
+			.sort((a,b) => (b.number - a.number));
+		this.collabs = nfts.filter(nft => !nft.number)
+			.sort((a,b) => (a.index - b.index));
 
 		this.stats.minted = this.gen1.length;
 		
