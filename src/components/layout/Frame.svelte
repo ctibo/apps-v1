@@ -1,5 +1,10 @@
 <script>
+  import Viewport from '../../lib/viewport';
   import Nav from './Nav.svelte';
+  let viewportElement;
+  $: if(viewportElement) {
+    Viewport.init(viewportElement);
+  }
 </script>
 
 <style lang="scss">
@@ -115,7 +120,7 @@
   <img src="/images/frame-top.png?t=2" alt=""/>
 
   <div class="inner-wrapper">
-    <main class="container">
+    <main class="container" bind:this={viewportElement}>
       <slot></slot>
     </main>
     <Nav />

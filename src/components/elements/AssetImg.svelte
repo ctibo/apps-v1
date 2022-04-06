@@ -1,14 +1,16 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { fade } from 'svelte/transition';
-  import LoadingInline from './LoadingInline.svelte';
   import { gateways, getHash } from '../../helpers/ipfs';
+  import LoadingInline from './LoadingInline.svelte';
+  import Viewport from '../../lib/viewport';
   export let src;
   export let alt;
   export let loading = true;
+  let wrapperElement;
   let gatewayIndex = 0;
   let hash;
-
+  let visible = false;
   $: src, loading = true;
 
   onMount(() => {
@@ -16,8 +18,13 @@
       hash = getHash(src);
       getIpfsSrc();
     }
+    Viewport.add(wrapperElement, isVisible);
   })
 
+  onDestroy(() => {
+    Viewport.remove(wrapperElement);
+  });
+ 
   function getIpfsSrc() {   
     if(!hash) return;
     src = gateways[gatewayIndex].replace(':hash', hash);
@@ -30,6 +37,10 @@
     gatewayIndex++;
     getIpfsSrc();
   }
+  function isVisible() {
+    visible = true;
+  }
+
 
 </script>
 
@@ -45,7 +56,7 @@
   .loader {
     position: absolute;
     top: 0;
-    left: 0;;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -59,14 +70,17 @@
 </style>
 
 {#if src}
-  <div class="img-wrapper">
+  <div 
+    class="img-wrapper"
+    bind:this={wrapperElement}
+  >
     <img
       on:load={loaded}
       on:error={failed}
-      {src} 
+      src={visible ? src : undefined} 
       {alt}
-      />
-    {#if loading }
+    />
+    {#if !visible || loading }
       <div class="loader" out:fade|local={{ duration: 300}}>
         <LoadingInline />
       </div>

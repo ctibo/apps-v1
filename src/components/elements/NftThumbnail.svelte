@@ -3,6 +3,7 @@
   import AssetImg from './AssetImg.svelte';
   export let nft = {};
   let loading = true;
+  
 </script>
 
 <style lang="scss">
@@ -54,7 +55,7 @@
   }
 </style>
 
-<article class="wrapper" on:click>
+<article class="wrapper" on:click >
   {#if nft.tag && !loading}
     <span class="tag" transition:fade|local={{ duration: 300}}>
       {nft.tag}
