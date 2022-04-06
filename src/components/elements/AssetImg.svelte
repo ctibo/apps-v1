@@ -7,10 +7,11 @@
   export let src;
   export let alt;
   export let loading = true;
+  export let lazyload = true;
   let wrapperElement;
   let gatewayIndex = 0;
   let hash;
-  let visible = false;
+  let visible = !lazyload;
   $: src, loading = true;
 
   onMount(() => {

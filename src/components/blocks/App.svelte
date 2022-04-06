@@ -89,7 +89,7 @@
       </button>
     </div>
 
-    <AssetImg src={nft.url} alt={nft.unit} />
+    <AssetImg src={nft.url} alt={nft.unit} lazyload={false}/>
 
     <div class="content">
 
