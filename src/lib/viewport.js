@@ -1,9 +1,6 @@
 
 
 class Viewport {
-  viewport;
-  observer;
-
   //
   // Init the viewport
   // ----------------------------------------------
