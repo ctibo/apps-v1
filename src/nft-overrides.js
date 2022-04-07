@@ -6,25 +6,25 @@ export default {
   //     href: 'https://discord.gg/ksZqFnA9', 
   //   },
   // },
-  // 'APP-67': {
-  //   tag: 'Auction',
-  //   link: {
-  //     label: 'Go to Auction',
-  //     href: 'https://algoxnft.com/collection/apps', 
-  //   },
-  // },
-  // 'APP-68': {
-  //   tag: 'Auction',
-  //   link: {
-  //     label: 'Go to Auction',
-  //     href: 'https://algoxnft.com/collection/apps', 
-  //   },
-  // }, 
-  // 'APP-69': {
-  //   tag: 'Auction',
-  //   link: {
-  //     label: 'Go to Auction',
-  //     href: 'https://algoxnft.com/collection/apps', 
-  //   },
-  // },
+  'APP-76': {
+    tag: 'Shuffle',
+    link: {
+      label: 'Go to Discord',
+      href: 'https://discord.gg/s2hmftgZus', 
+    },
+  },
+  'APP-77': {
+    tag: 'Shuffle',
+    link: {
+      label: 'Go to Discord',
+      href: 'https://discord.gg/s2hmftgZus', 
+    },
+  }, 
+  'APP-78': {
+    tag: 'Shuffle',
+    link: {
+      label: 'Go to Discord',
+      href: 'https://discord.gg/s2hmftgZus', 
+    },
+  },
 }
