@@ -60,11 +60,17 @@
   @include x-small-screen() {
     .tile img {
       width: 3em;
+      max-width: 80%;
       margin: 5%;
     }
     .big-tiles {
-      grid-template-columns: repeat(2, 1fr);
-      margin-bottom: 0.5em;
+      margin-bottom: 0.25em;
+      .tile {
+        margin: 0;
+      }
+    }
+    .tiles .text-link {
+      display: none;
     }
   }
 </style>
