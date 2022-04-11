@@ -3,6 +3,7 @@
 </script>
 
 <style lang="scss">
+  @import '../../styles/mixins';
   .tiles  {
     display: grid;
     grid-gap: 0.5em;
@@ -14,8 +15,9 @@
       font-size: clamp(0.5em, 2vw, 0.75em);
     }
   }
+
   .big-tiles {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .large-tiles {
     grid-template-columns: repeat(2, 1fr);
@@ -34,6 +36,7 @@
     img {
       width: 75%;
       margin: 12.5%;
+      
     }
     
   }
@@ -53,6 +56,17 @@
       color: #ad7bff;
     }
   }
+
+  @include x-small-screen() {
+    .tile img {
+      width: 3em;
+      margin: 5%;
+    }
+    .big-tiles {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 0.5em;
+    }
+  }
 </style>
 
 
@@ -63,6 +77,15 @@
     </a> 
     <a class="text-link" href="https://www.nftexplorer.app/collection?creator={vars.CREATOR_ACCOUNT}" target="_blank">
       NFT Explorer
+    </a> 
+  </li>
+
+  <li>
+    <a class="tile" href="https://www.asalytic.app/collections/APPs%20-%20Awesome%20Profile%20Pics" target="_blank">
+      <img src="/images/asalytic-logo.png" alt="Asalytic" />
+    </a> 
+    <a class="text-link" href="https://www.asalytic.app/collections/APPs%20-%20Awesome%20Profile%20Pics" target="_blank">
+      Asalytic
     </a> 
   </li>
 
