@@ -19,13 +19,13 @@
     </tr>
 
     <tr>
-      <td>Mon Apr 4<sup>th</sup> <br/>to Tue Apr 5<sup>th</sup> <br/>8PM UTC</td>
-      <td>APP #73-74-75 <br/> 24H Auction <br/>ALGOxNFT</td>
+      <td>Tue Apr 12<sup>th</sup> <br/>to Wed Apr 13<sup>th</sup> <br/>8PM UTC</td>
+      <td>APP #79-80-81 <br/> 24H Auction <br/>ALGOxNFT</td>
     </tr>
 
     <tr>
-      <td>Thu Apr 7<sup>th</sup> <br/>to Fri Apr 8<sup>th</sup> <br/>8PM UTC</td>
-      <td>APP #76-77-78 <br/> 24H Discord Shuffle</td>
+      <td>Thu Apr 14<sup>th</sup> <br/>to Fri Apr 15<sup>th</sup> <br/>8PM UTC</td>
+      <td>APP #82-83-84 <br/> 24H Discord Shuffle</td>
     </tr>
 
   </table>
