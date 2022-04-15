@@ -1,6 +1,8 @@
 <script>
   import { fade } from 'svelte/transition';
+  import { queryUrl } from '../../helpers/strings';
   import AssetImg from './AssetImg.svelte';
+
   export let nft = {};
   let loading = true;
   
@@ -10,6 +12,9 @@
   .wrapper {
     position: relative;
     cursor: pointer;
+    a:hover {
+      text-decoration: none;
+    }
   }
   .thumbnail {
     position: relative;
@@ -55,18 +60,19 @@
   }
 </style>
 
-<article class="wrapper" on:click >
-  {#if nft.tag && !loading}
-    <span class="tag" transition:fade|local={{ duration: 300}}>
-      {nft.tag}
-    </span>
-  {/if}
-  
-  <div class="thumbnail">
-    <AssetImg src={nft.url} alt={nft.unit} bind:loading />
-  </div>
-  <h2 class="thumbnail-title">
-    {nft.unit}
-  </h2>
-
+<article class="wrapper" >
+  <a href={queryUrl({id: nft.index})}>
+    {#if nft.tag && !loading}
+      <span class="tag" transition:fade|local={{ duration: 300}}>
+        {nft.tag}
+      </span>
+    {/if}
+    
+    <div class="thumbnail">
+      <AssetImg src={nft.url} alt={nft.unit} bind:loading />
+    </div>
+    <h2 class="thumbnail-title">
+      {nft.unit}
+    </h2>
+  </a>
 </article>

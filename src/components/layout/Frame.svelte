@@ -1,6 +1,7 @@
 <script>
   import Viewport from '../../lib/viewport';
   import Nav from './Nav.svelte';
+  import App from '../blocks/App.svelte';
   let viewportElement;
   $: if(viewportElement) {
     Viewport.init(viewportElement);
@@ -122,6 +123,7 @@
   <div class="inner-wrapper">
     <main class="container" bind:this={viewportElement}>
       <slot></slot>
+      <App />
     </main>
     <Nav />
   </div>

@@ -1,5 +1,6 @@
 <script>
   import { stores } from '@sapper/app';
+  import { queryUrl } from '../../helpers/strings';
   export let currentGrid = '99';
   const { page } = stores();
   $: currentGrid = $page.query.nfts || '99'; 
@@ -41,7 +42,7 @@
 <nav>
   <ul>
     <li>
-      <a href="?nfts=99"
+      <a href={queryUrl({nfts: '99'})}
         class:active={currentGrid === '99'}
       >
         99 APPs
@@ -49,7 +50,7 @@
     </li>
     <li>
       <a
-        href="?nfts=collabs"
+        href={queryUrl({nfts: 'collabs'})}
         class:active={currentGrid === 'collabs'} 
       >
         Collabs

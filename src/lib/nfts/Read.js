@@ -1,6 +1,7 @@
 import { uniqBy, groupBy } from 'lodash';
 import { tick } from 'svelte'; 
 import { get } from 'svelte/store';
+import { stores } from '@sapper/app';
 import algoClient from '../algoClient';
 import vars from '../../vars';
 import overrides from '../../nft-overrides';
@@ -57,12 +58,10 @@ export default class Read {
 			.sort((a,b) => (b.number - a.number));
 		this.collabs = nfts.filter(nft => !nft.number)
 			.sort((a,b) => (a.index - b.index));
-
 		this.stats.minted = this.gen1.length;
-		
 		this.loading = false;
+
 		this.statsLoading = true;
-		
 		this.dispatchUpdate();
 
 		await this.getSalesData();
