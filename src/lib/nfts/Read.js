@@ -150,63 +150,69 @@ export default class Read {
 	// ----------------------------------------------
 	async getSalesData() {
 		const $sales = get(sales);
-		await Promise.all(this.all.map(async (nft) => {
-			// Get previous stored data
-			let salesData = $sales[nft.index];
-			if (!salesData) salesData = { txns: [], highestSale: 0, round: 0 };
-
-			// get untracked transfer txns
-			const lookupParams = {
-				'tx-type': 'axfer',
-			};
-			if (salesData.round) {
-				lookupParams['min-round'] = salesData.round + 1;
-			}
-			let txns = await algoClient.lookupAssetTransactions(nft.index, lookupParams);
-			
-			// get only groups
-			const txnGroups = uniqBy(txns.transactions.filter(txn => txn.group), 'group');
-			txnGroups.sort((a,b) => b['confirmed-round'] - a['confirmed-round']);
-					
-			
-			// get rounds txns for each group
-			await Promise.all(txnGroups.map(async (axfer) => {
-				const round = await algoClient.lookupBlock(axfer['confirmed-round']);
-				// get nft txns from that group
-        const group = round.transactions.filter(txn => txn.group === axfer.group);
-				
-				// payments from group
-				const payments = group.filter(txn => (
-					txn['tx-type'] === 'pay')
-					&& txn.sender == axfer['asset-transfer-transaction'].receiver
-				);
-        if (!payments.length) return;      
-				
-				// get sale amount
-				const amount = payments.reduce((total, txn) => (total + txn['payment-transaction'].amount), 0);
-				
-				// push sale data
-				if (!salesData.txns.find(sale => sale.round === axfer['confirmed-round'])) {
-					salesData.txns.push({
-						buyer: axfer['asset-transfer-transaction'].receiver,
-						// seller: payment['payment-transaction'].receiver,
-						price: Math.round(amount / 10000) / 100,
-						round: axfer['confirmed-round'],
-					});
+		try {
+			await Promise.all(this.all.map(async (nft) => {
+				// Get previous stored data
+				let salesData = $sales[nft.index];
+				if (!salesData) salesData = { txns: [], highestSale: 0, round: 0 };
+	
+				// get untracked transfer txns
+				const lookupParams = {
+					'tx-type': 'axfer',
+				};
+				if (salesData.round) {
+					lookupParams['min-round'] = salesData.round + 1;
 				}
+				let txns = await algoClient.lookupAssetTransactions(nft.index, lookupParams);
+				
+				// get only groups
+				const txnGroups = uniqBy(txns.transactions.filter(txn => txn.group), 'group');
+				txnGroups.sort((a,b) => b['confirmed-round'] - a['confirmed-round']);
+						
+				
+				// get rounds txns for each group
+				await Promise.all(txnGroups.map(async (axfer) => {
+					const round = await algoClient.lookupBlock(axfer['confirmed-round']);
+					// get nft txns from that group
+					const group = round.transactions.filter(txn => txn.group === axfer.group);
+					
+					// payments from group
+					const payments = group.filter(txn => (
+						txn['tx-type'] === 'pay')
+						&& txn.sender == axfer['asset-transfer-transaction'].receiver
+					);
+					if (!payments.length) return;      
+					
+					// get sale amount
+					const amount = payments.reduce((total, txn) => (total + txn['payment-transaction'].amount), 0);
+					
+					// push sale data
+					if (!salesData.txns.find(sale => sale.round === axfer['confirmed-round'])) {
+						salesData.txns.push({
+							buyer: axfer['asset-transfer-transaction'].receiver,
+							// seller: payment['payment-transaction'].receiver,
+							price: Math.round(amount / 10000) / 100,
+							round: axfer['confirmed-round'],
+						});
+					}
+				}));
+	
+				// gather data
+				salesData.txns.sort((b,a) => b.round - a.round);
+				salesData.highestSale = salesData.txns
+					.reduce((high, sale) => (sale.price > high ? sale.price : high), 0);
+				salesData.round = salesData.txns
+					.reduce((latest, sale) => (sale.round > latest ? sale.round : latest), 0); 
+				
+				// Update storage
+				$sales[nft.index] = salesData;
 			}));
+		}
+		catch (e) {
+			console.log(e);
+		}
 
-			// gather data
-			salesData.txns.sort((b,a) => b.round - a.round);
-			salesData.highestSale = salesData.txns
-				.reduce((high, sale) => (sale.price > high ? sale.price : high), 0);
-			salesData.round = salesData.txns
-				.reduce((latest, sale) => (sale.round > latest ? sale.round : latest), 0); 
-			
-			// Update storage
-			$sales[nft.index] = salesData;
-		}));
-
+		
 		sales.set($sales);
 
 		// Set sales in nfts object;
