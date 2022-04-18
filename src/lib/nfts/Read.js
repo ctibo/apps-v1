@@ -1,7 +1,6 @@
-import { uniqBy, groupBy } from 'lodash';
+import { uniq, uniqBy, groupBy } from 'lodash';
 import { tick } from 'svelte'; 
 import { get } from 'svelte/store';
-import { stores } from '@sapper/app';
 import algoClient from '../algoClient';
 import vars from '../../vars';
 import overrides from '../../nft-overrides';
@@ -164,34 +163,42 @@ export default class Read {
 					lookupParams['min-round'] = salesData.round + 1;
 				}
 				let txns = await algoClient.lookupAssetTransactions(nft.index, lookupParams);
-				
+				if (!txns || !txns.transactions.length) return;
+
 				// get only groups
-				const txnGroups = uniqBy(txns.transactions.filter(txn => txn.group), 'group');
+				const groups = txns.transactions.filter(txn => txn.group && txn['asset-transfer-transaction']);
+				const txnGroups = uniqBy(groups, 'group');
 				txnGroups.sort((a,b) => b['confirmed-round'] - a['confirmed-round']);
-						
-				
+							
 				// get rounds txns for each group
 				await Promise.all(txnGroups.map(async (axfer) => {
 					const round = await algoClient.lookupBlock(axfer['confirmed-round']);
 					// get nft txns from that group
 					const group = round.transactions.filter(txn => txn.group === axfer.group);
+
 					
 					// payments from group
 					const payments = group.filter(txn => (
-						txn['tx-type'] === 'pay')
+						txn['tx-type'] === 'pay'
 						&& txn.sender == axfer['asset-transfer-transaction'].receiver
-					);
+					));
 					if (!payments.length) return;      
 					
 					// get sale amount
 					const amount = payments.reduce((total, txn) => (total + txn['payment-transaction'].amount), 0);
 					
+					// get number of nfts in group
+					const nftsInGroup = uniq(
+						group
+							.filter(txn => txn['tx-type'] === 'axfer')
+							.map(txn => txn['asset-transfer-transaction']['asset-id'])
+					).length || 1;
+
 					// push sale data
 					if (!salesData.txns.find(sale => sale.round === axfer['confirmed-round'])) {
 						salesData.txns.push({
 							buyer: axfer['asset-transfer-transaction'].receiver,
-							// seller: payment['payment-transaction'].receiver,
-							price: Math.round(amount / 10000) / 100,
+							price: Math.round(amount / 10000) / 100 / nftsInGroup,
 							round: axfer['confirmed-round'],
 						});
 					}
@@ -212,7 +219,7 @@ export default class Read {
 			console.log(e);
 		}
 
-		
+
 		sales.set($sales);
 
 		// Set sales in nfts object;
