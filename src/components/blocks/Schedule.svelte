@@ -9,7 +9,7 @@
 
 <div class="schedule">
   <h2 class="section-title">
-    Next drops
+    Final drops
   </h2>
 
   <table>
