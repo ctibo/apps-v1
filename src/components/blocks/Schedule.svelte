@@ -19,18 +19,30 @@
     </tr>
 
     <tr>
-      <td>Tue Apr 18<sup>th</sup> <br/>8PM UTC</td>
-      <td>Custom APP <br/> Twitter Giveaway</td>
+      <td>Wed Apr 27<sup>th</sup> <br/>to Thu Apr 28<sup>th</sup> <br/>8PM UTC</td>
+      <td>APP #91-92-93 <br/> 24H Auction <br/>ALGOxNFT</td>
+    </tr>
+    
+    <tr>
+      <td>Sun May 1<sup>st</sup></td>
+      <td>Prismania - Shuffle the Rainbow 
+        <br/>on ALGOxNFT
+        <br/>100% of the shuffle proceeds 
+        <br/>donated to The Trevor Project 
+      </td>
+    </tr>
+    
+    <tr>
+      <td>Mon May 2<sup>nd</sup> <br/>to Tue May 3<sup>rd</sup> <br/>8PM UTC</td>
+      <td>APP #94-95-96 <br/> 24H Discord Shuffle</td>
     </tr>
 
     <tr>
-      <td>Tue Apr 19<sup>th</sup> <br/>to Wed Apr 20<sup>th</sup> <br/>8PM UTC</td>
-      <td>APP #85-86-87 <br/> 24H Auction <br/>ALGOxNFT</td>
-    </tr>
-
-    <tr>
-      <td>Thu Apr 21<sup>st</sup> <br/>to Fri Apr 22<sup>nd</sup> <br/>8PM UTC</td>
-      <td>APP #88-89-90 <br/> 24H Discord Shuffle</td>
+      <td>Wed May 4<sup>th</sup> <br/>to Thu May 5<sup>th</sup> <br/>11PM UTC </td>
+      <td>
+        APP #97-98-99 + Custom<br/> 24H Auctions
+        <br/> + Custom APP giveaway
+      </td>
     </tr>
 
   </table>

@@ -1,11 +1,11 @@
 export default {
-  // 'APP-HAND': {
-  //   tag: 'Auction',
-  //   link: {
-  //     label: 'Hans Discord',
-  //     href: 'https://discord.gg/ksZqFnA9', 
-  //   },
-  // },
+  'APP-PRSM': {
+    tag: 'Prismania',
+    // link: {
+    //   label: 'Algo',
+    //   href: 'https://discord.gg/ksZqFnA9', 
+    // },
+  },
   
   // 'APP-79': {
   //   tag: 'Auction',
