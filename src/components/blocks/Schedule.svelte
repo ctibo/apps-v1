@@ -38,7 +38,9 @@
     </tr>
 
     <tr>
-      <td>Wed May 4<sup>th</sup> <br/>to Thu May 5<sup>th</sup> <br/>11PM UTC </td>
+      <td>
+        Thu May 5<sup>th</sup> 1AM UTC (Wed 4th 9PM EDT) to<br/>
+        Fri May 6<sup>th</sup> 1AM UTC (Thu 5th 9PM EDT)</td>
       <td>
         APP #97-98-99 + Custom<br/> 24H Auctions
         <br/> + Custom APP giveaway
