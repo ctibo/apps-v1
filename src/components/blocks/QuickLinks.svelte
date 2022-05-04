@@ -20,7 +20,7 @@
     grid-template-columns: repeat(4, 1fr);
   }
   .large-tiles {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .tile {
     display: block;
@@ -54,6 +54,9 @@
     }
     .fa-discord {
       color: #ad7bff;
+    }
+    .fa-instagram {
+      color: #e95d8a;
     }
   }
 
@@ -118,6 +121,15 @@
 
 <ul class="tiles large-tiles">
   <li>
+    <a class="tile badge" href="https://www.instagram.com/apps_nft/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="text-link" href="https://www.instagram.com/apps_nft/" target="_blank">
+      Instagram
+    </a>
+  </li>
+
+  <li>
     <a class="tile badge" href="https://twitter.com/apps_nft" target="_blank">
       <i class="fab fa-twitter"></i>
     </a>
@@ -125,6 +137,7 @@
       Twitter
     </a>
   </li>
+
 
   <li>
     <a class="tile badge" href="https://discord.gg/8JFAbK6ktp" target="_blank">
