@@ -4,6 +4,7 @@
   import AssetImg from './AssetImg.svelte';
 
   export let nft = {};
+  export let lazyload = true;
   let loading = true;
   
 </script>
@@ -69,7 +70,7 @@
     {/if}
     
     <div class="thumbnail">
-      <AssetImg src={nft.url} alt={nft.unit} bind:loading />
+      <AssetImg src={nft.url} alt={nft.unit} bind:loading {lazyload} />
     </div>
     <h2 class="thumbnail-title">
       {nft.unit}

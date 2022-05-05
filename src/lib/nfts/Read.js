@@ -13,6 +13,7 @@ export default class Read {
 		this.loading = true;
 		this.dispatchUpdate();
 		
+	
 		const response = await algoClient.lookupAccountByID(vars.CREATOR_ACCOUNT);
 		if (!response.account['created-assets']) return [];
 		
@@ -92,7 +93,10 @@ export default class Read {
 				}
 				else {
 					let account = await algoClient.lookupAccountByID(nft.holder);
-					if (account.account.assets.length === 1) accountData.isEscrow = true
+					if (
+						(account.data && account.data['total-assets-opted-in'] > 1) 
+						|| account.account.assets.length === 1
+					) accountData.isEscrow = true
 				}
 				$accounts[nft.holder] = accountData;
 			}
