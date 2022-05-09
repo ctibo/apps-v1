@@ -54,11 +54,9 @@
 
 
   <p>
-    APPs (Awesome Profile Pics) is an NFT project composed of 99 uniquely hand-drawn NFTs (1/1) on Algorand.
+    APPs (Awesome Profile Pics) are 99 square NFTs living on the Algorand blockchain.
   </p>
 
-  <Schedule />
-  <MintPrice />
   <Roadmap />
  
 </div>

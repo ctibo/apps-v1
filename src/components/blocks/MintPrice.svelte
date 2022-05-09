@@ -26,7 +26,7 @@
   <li class="done">
     #49-72 ➞ 55<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
-  <li class="">
+  <li class="done">
     #73-99 ➞ 66<img class="algos" src="/images/algo-logo.svg" alt="Algos" />
   </li>
 </ul> 
