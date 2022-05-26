@@ -4,7 +4,7 @@ import { get } from 'svelte/store';
 import algoClient from '../algoClient';
 import vars from '../../vars';
 import overrides from '../../nft-overrides';
-import { sales, accounts } from '../../stores/nfts';
+import { assets, sales, accounts } from '../../stores/nfts';
 
 
 export default class Read {
@@ -12,8 +12,8 @@ export default class Read {
   async getNfts() {
 		this.loading = true;
 		this.dispatchUpdate();
-		
-	
+		const $assets = get(assets);
+		console.log($assets)
 		const response = await algoClient.lookupAccountByID(vars.CREATOR_ACCOUNT);
 		if (!response.account['created-assets']) return [];
 		
@@ -23,35 +23,33 @@ export default class Read {
 				!asset.deleted
 				&& asset.params['unit-name'].startsWith(vars.NFT_PREFIX)
 			))
-			.map(asset => ({
-				...asset.params,
-				index: asset.index,
-				unit: asset.params['unit-name'],
-				number: Number(
-					asset.params['unit-name'].replace(vars.NFT_PREFIX, '')
-				),
-				tag: false,
-			}));
-	
-		// Get holders
-		await Promise.all(nfts.map(async (nft) => {
-			const asset = await algoClient.lookupAssetBalances(nft.index, {
-				'currency-greater-than': 0,
-			})
+			.map(asset => {
+				if (!$assets[asset.index]) {
+					$assets[asset.index] = {
+						...asset.params,
+						index: asset.index,
+						unit: asset.params['unit-name'],
+						number: Number(
+							asset.params['unit-name'].replace(vars.NFT_PREFIX, '')
+						),
+						holder: '',
+						tag: false,
+					};
+				}
+				return $assets[asset.index];
+			});
 
-			nft.holder = asset.balances[0].address;
-			if (nft.holder === vars.CREATOR_ACCOUNT) {
-				nft.tag = 'Soon';
-			}
+		// update cache
+		assets.set($assets);
 
-			// Overrides tags and links
+		// Overrides tags and links
+		nfts.forEach(nft => {
 			if (overrides[nft.unit]) {
 				Object.entries(overrides[nft.unit]).forEach(([key, value]) => {
 					nft[key] = value;
 				});				
 			}
-			
-		}));
+		});
 		
 		this.all = nfts;
 		this.gen1 = nfts.filter(nft => nft.number)
@@ -64,8 +62,8 @@ export default class Read {
 		this.statsLoading = true;
 		this.dispatchUpdate();
 
-		await this.getSalesData();
 		await this.getHoldersData();
+		// await this.getSalesData();
 
 		this.statsLoading = false;
 		await tick();
@@ -73,13 +71,22 @@ export default class Read {
 	}
 
 
-
 	//
 	// Get sales stats
 	// ----------------------------------------------
 	async getHoldersData() {
+		const $assets = get(assets);
 		const $accounts = get(accounts);
-		await Promise.all(this.all.map(async (nft) => {
+
+		for(let i=0; i<this.all.length; i++) {
+			const nft = this.all[i];
+	
+			// get holder
+			const asset = await algoClient.lookupAssetBalances(nft.index, {
+				'currency-greater-than': 0,
+			})
+			nft.holder = asset.balances[0].address;
+
 			// Get previous stored data
 			let accountData = $accounts[nft.holder];
 			// check if holder is an escrow account
@@ -113,13 +120,16 @@ export default class Read {
 					nft.holder = txns.transactions[0].sender;
 				}
 			}
-		}));
+
+			$assets[nft.index].holder = nft.holder;
+		};
 
 		// Set cache
 		accounts.set($accounts);
+		assets.set($assets);
+
 
 		// group holders
-		
 		const holders = groupBy(
 			this.all.filter(nft => nft.holder !== vars.CREATOR_ACCOUNT),
 			'holder'
@@ -154,7 +164,9 @@ export default class Read {
 	async getSalesData() {
 		const $sales = get(sales);
 		try {
-			await Promise.all(this.all.map(async (nft) => {
+			for(let i=0; i<this.all.length; i++) {
+				const nft = this.all[i];
+
 				// Get previous stored data
 				let salesData = $sales[nft.index];
 				if (!salesData) salesData = { txns: [], highestSale: 0, round: 0 };
@@ -175,7 +187,8 @@ export default class Read {
 				txnGroups.sort((a,b) => b['confirmed-round'] - a['confirmed-round']);
 							
 				// get rounds txns for each group
-				await Promise.all(txnGroups.map(async (axfer) => {
+				for (let j=0; j<txnGroups.length; j++) {
+					const axfer = txnGroups[j];
 					const round = await algoClient.lookupBlock(axfer['confirmed-round']);
 					// get nft txns from that group
 					const group = round.transactions.filter(txn => txn.group === axfer.group);
@@ -206,7 +219,7 @@ export default class Read {
 							round: axfer['confirmed-round'],
 						});
 					}
-				}));
+				};
 	
 				// gather data
 				salesData.txns.sort((b,a) => b.round - a.round);
@@ -217,7 +230,7 @@ export default class Read {
 				
 				// Update storage
 				$sales[nft.index] = salesData;
-			}));
+			};
 		}
 		catch (e) {
 			console.log(e);
