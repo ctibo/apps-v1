@@ -122,11 +122,11 @@ export default class Read {
 			}
 
 			$assets[nft.index].holder = nft.holder;
+			assets.set($assets);
 		};
 
 		// Set cache
 		accounts.set($accounts);
-		assets.set($assets);
 
 
 		// group holders

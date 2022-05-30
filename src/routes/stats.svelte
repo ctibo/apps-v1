@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import nfts from '../lib/nfts';
   import HighestSales from '../components/blocks/HighestSales.svelte';
-  import HoldersDistribution from '../components/blocks/HoldersDistribution.svelte';
+  // import HoldersDistribution from '../components/blocks/HoldersDistribution.svelte';
   import LoadingInline from '../components/elements/LoadingInline.svelte';
   onMount(() => {
     nfts.dispatchUpdate();
@@ -19,12 +19,13 @@
     Awesome Stats
   </h1>
 
-  {#if $nfts && ($nfts.loading || $nfts.statsLoading) }
+  {#if $nfts && $nfts.loading }
     <LoadingInline />
   {:else}
-    {#key nfts.statsLoading}
-      <HoldersDistribution total={nfts.stats.totalHolders} distribution={nfts.stats.holdersDistribution} />
-      <HighestSales nfts={nfts.stats.highestSales} />
+    {#key nfts.loading}
+      Stats disabled temporarily. 
+      <!-- <HoldersDistribution total={nfts.stats.totalHolders} distribution={nfts.stats.holdersDistribution} /> -->
+      <!-- <HighestSales nfts={nfts.stats.highestSales} /> -->
     {/key}
   {/if}
 
