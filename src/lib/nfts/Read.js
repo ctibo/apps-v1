@@ -105,6 +105,9 @@ export default class Read {
 						|| account.account.assets.length === 1
 					) accountData.isEscrow = true
 				}
+
+				// lookup NFDs
+
 				$accounts[nft.holder] = accountData;
 			}
 
@@ -135,8 +138,8 @@ export default class Read {
 			'holder'
 		);
 		this.stats.holders = Object.entries(holders)
-		.map(([address, nfts]) => ({ address, nfts, qty: nfts.length }))
-		.sort((a,b) => b.qty - a.qty);
+			.map(([address, nfts]) => ({ address, nfts, qty: nfts.length }))
+			.sort((a,b) => b.qty - a.qty);
 		
 		// get total
 		this.stats.totalHolders = this.stats.holders.length;
